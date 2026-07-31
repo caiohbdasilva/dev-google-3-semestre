@@ -1,0 +1,15 @@
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\bin\Debug\net10.0\SISTEMA-BANCARIO.exe
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\bin\Debug\net10.0\SISTEMA-BANCARIO.deps.json
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\bin\Debug\net10.0\SISTEMA-BANCARIO.runtimeconfig.json
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\bin\Debug\net10.0\SISTEMA-BANCARIO.dll
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\bin\Debug\net10.0\SISTEMA-BANCARIO.pdb
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.AssemblyInfoInputs.cache
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.AssemblyInfo.cs
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.csproj.CoreCompileInputs.cache
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.sourcelink.json
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.dll
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\refint\SISTEMA-BANCARIO.dll
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.pdb
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\SISTEMA-BANCARIO.genruntimeconfig.cache
+C:\Users\45797375800\Desktop\dev-google-terceiro-semestre\SPRINT_1-REVISAO_E_NIVELAMENTO\AULA_2-POO\SISTEMA-BANCARIO\obj\Debug\net10.0\ref\SISTEMA-BANCARIO.dll
