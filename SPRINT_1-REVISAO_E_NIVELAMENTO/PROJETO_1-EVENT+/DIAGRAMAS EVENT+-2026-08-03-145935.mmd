@@ -1,0 +1,60 @@
+erDiagram
+	direction TB
+	TIPO_USUARIO {
+		UNIQUEIDENTIFIER IdTipoUsuario PK ""  
+		VARCHAR(100) TituloUsuario  "NOT NULL"  
+	}
+
+	USUARIO {
+		UNIQUEIDENTIFIER IdUsuario PK ""  
+		UNIQUEIDENTIFIER IdTipoUsuario FK ""  
+		VARCHAR(100) Nome  ""  
+		VARCHAR(100) Email "UNIQUE, NOT NULL"  
+		VARCHAR(60) Senha  "NOT NULL"  
+	}
+
+	PRESENCA {
+		UNIQUEIDENTIFIER IdPresenca PK ""  
+		UNIQUEIDENTIFIER IdUsuario FK ""  
+		UNIQUEIDENTIFIER IdEvento FK ""  
+		BIT Situacao  "NOT NULL"  
+	}
+
+	COMENTARIO {
+		UNIQUEIDENTIFIER IdComentario PK ""  
+		UNIQUEIDENTIFIER IdEvento FK ""  
+		UNIQUEIDENTIFIER IdUsuario FK ""  
+		VARCHAR(250) DescricaoComentario  "NOT NULL"  
+		DATETIME DataComentario  "NOT NULL"  
+		BIT Exibe  "NOT NULL"  
+	}
+
+	TIPO_EVENTO {
+		UNIQUEIDENTIFIER IdTipoEvento PK ""  
+		VARCHAR(100) TituloEvento  "NOT NULL"  
+	}
+
+	EVENTO {
+		UNIQUEIDENTIFIER IdEvento PK ""  
+		UNIQUEIDENTIFIER IdInstituicao FK ""  
+		UNIQUEIDENTIFIER IdTipoEvento FK ""  
+		VARCHAR(100) NomeEvento  "NOT NULL"  
+		TEXT DescricaoEvento  "NOT NULL"  
+		DATETIME DataEvento  "NOT NULL"  
+		VARCHAR(200) URLImagem  ""  
+	}
+
+	INSTITUICAO {
+		UNIQUEIDENTIFIER IdInstituicao PK ""  
+		VARCHAR(14) CNPJ "UNIQUE, NOT NULL"  
+		VARCHAR(100) NomeFantasia  "NOT NULL"  
+		VARCHAR(100) Endereco  "NOT NULL"  
+	}
+
+	TIPO_USUARIO||--o{USUARIO:"classifica"
+	INSTITUICAO||--o{EVENTO:"promove"
+	TIPO_EVENTO||--o{EVENTO:"classifica"
+	USUARIO||--o{PRESENCA:"confirma"
+	EVENTO||--o{PRESENCA:"possui"
+	USUARIO||--o{COMENTARIO:"escreve"
+	EVENTO||--o{COMENTARIO:"recebe"
