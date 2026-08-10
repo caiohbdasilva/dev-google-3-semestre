@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace EventPlus.WebAPI.Models;
 
 [Table("INSTITUICAO")]
-[Index("Cnpj", Name = "UQ__INSTITUI__AA57D6B4AEF86778", IsUnique = true)]
+[Index("Cnpj", Name = "UQ__INSTITUI__AA57D6B4E57B95AB", IsUnique = true)]
 public partial class Instituicao
 {
     [Key]

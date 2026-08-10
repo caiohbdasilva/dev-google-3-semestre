@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace EventPlus.WebAPI.Models;
 
 [Table("USUARIO")]
-[Index("Email", Name = "UQ__USUARIO__A9D1053438526AF7", IsUnique = true)]
+[Index("Email", Name = "UQ__USUARIO__A9D10534547BBA7E", IsUnique = true)]
 public partial class Usuario
 {
     [Key]

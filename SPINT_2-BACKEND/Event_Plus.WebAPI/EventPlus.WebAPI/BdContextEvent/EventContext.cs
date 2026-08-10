@@ -29,17 +29,16 @@ public partial class EventContext : DbContext
     public virtual DbSet<TipoUsuario> TipoUsuario { get; set; }
 
     public virtual DbSet<Usuario> Usuario { get; set; }
-    public object TipoUsuarios { get; internal set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=D14S20-1252898\\MSSQLSERVER2;Database=eventplus;User Id=sa;Password=Senai@134;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=D22S20-1252908\\MSSQLSERVER2;Database=eventplus;User Id=sa;Password=Senai@134;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Comentario>(entity =>
         {
-            entity.HasKey(e => e.IdComentario).HasName("PK__COMENTAR__DDBEFBF98EBE7536");
+            entity.HasKey(e => e.IdComentario).HasName("PK__COMENTAR__DDBEFBF947B6EBFC");
 
             entity.Property(e => e.IdComentario).HasDefaultValueSql("(newid())");
 
@@ -50,7 +49,7 @@ public partial class EventContext : DbContext
 
         modelBuilder.Entity<Evento>(entity =>
         {
-            entity.HasKey(e => e.IdEvento).HasName("PK__EVENTO__034EFC040E875D0F");
+            entity.HasKey(e => e.IdEvento).HasName("PK__EVENTO__034EFC049F5BBE89");
 
             entity.Property(e => e.IdEvento).HasDefaultValueSql("(newid())");
 
@@ -61,14 +60,14 @@ public partial class EventContext : DbContext
 
         modelBuilder.Entity<Instituicao>(entity =>
         {
-            entity.HasKey(e => e.IdInstituicao).HasName("PK__INSTITUI__B771C0D81C746CED");
+            entity.HasKey(e => e.IdInstituicao).HasName("PK__INSTITUI__B771C0D8DE1DD7F9");
 
             entity.Property(e => e.IdInstituicao).HasDefaultValueSql("(newid())");
         });
 
         modelBuilder.Entity<Presenca>(entity =>
         {
-            entity.HasKey(e => e.IdPresenca).HasName("PK__PRESENCA__50FB6F5D8058F9BC");
+            entity.HasKey(e => e.IdPresenca).HasName("PK__PRESENCA__50FB6F5D55E9AC40");
 
             entity.Property(e => e.IdPresenca).HasDefaultValueSql("(newid())");
 
@@ -79,21 +78,21 @@ public partial class EventContext : DbContext
 
         modelBuilder.Entity<TipoEvento>(entity =>
         {
-            entity.HasKey(e => e.IdTipoEvento).HasName("PK__TIPO_EVE__CDB3A3BE9247C341");
+            entity.HasKey(e => e.IdTipoEvento).HasName("PK__TIPO_EVE__CDB3A3BE7698925F");
 
             entity.Property(e => e.IdTipoEvento).HasDefaultValueSql("(newid())");
         });
 
         modelBuilder.Entity<TipoUsuario>(entity =>
         {
-            entity.HasKey(e => e.IdTipoUsuario).HasName("PK__TIPO_USU__CA04062BDFDA1654");
+            entity.HasKey(e => e.IdTipoUsuario).HasName("PK__TIPO_USU__CA04062BBD098D17");
 
             entity.Property(e => e.IdTipoUsuario).HasDefaultValueSql("(newid())");
         });
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.IdUsuario).HasName("PK__USUARIO__5B65BF972622EA42");
+            entity.HasKey(e => e.IdUsuario).HasName("PK__USUARIO__5B65BF97BB511223");
 
             entity.Property(e => e.IdUsuario).HasDefaultValueSql("(newid())");
 
