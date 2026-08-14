@@ -48,5 +48,55 @@ namespace EventPlus.WebAPI.Controllers
             await _tipoEvento.Cadastrar(tipoEvento);
             return StatusCode(201, tipoEvento);
         }
+
+
+        [HttpGet("{Id:guid}")]
+        public async Task<IActionResult> BuscarPorId(Guid Id)
+        {
+            try
+            {
+                var tipoEventoBuscado = await _tipoEvento.BuscarPorId(Id);
+                if (tipoEventoBuscado == null)
+                {
+                    return NotFound("Tipo de evento não encontrado.");
+                }
+                return Ok(tipoEventoBuscado);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
+
+        [HttpDelete("{Id:guid}")]
+        public async Task<IActionResult> Deletar(Guid Id)
+        {
+            try
+            {
+                await _tipoEvento.Deletar(Id);
+                return NoContent();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
+        [HttpPut("{Id:guid}")]
+        public async Task<IActionResult> Atualizar(Guid Id, [FromBody] TipoEventoDTO DTO)
+        {
+            try
+            {
+                var tipoEvento = new TipoEvento
+                {
+                    TituloEvento = DTO.TituloTipoEvento
+                };
+                await _tipoEvento.Atualizar(Id, tipoEvento);
+                return NoContent();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.Message);
+            }
+        }
     }
 }

@@ -17,6 +17,8 @@ builder.Services.AddScoped<ITipoUsuario, TipoUsuarioRepository>();
 
 builder.Services.AddScoped<ITipoEvento, TipoEventoRepository>();
 
+builder.Services.AddScoped<IUsuario, UsuarioRepository>();
+
 builder.Services.AddControllers();
 
 var app = builder.Build();

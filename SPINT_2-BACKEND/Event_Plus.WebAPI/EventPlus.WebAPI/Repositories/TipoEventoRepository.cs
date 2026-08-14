@@ -14,14 +14,21 @@ public class TipoEventoRepository : ITipoEvento
             _context = context;
         }
 
-    public Task Atualizar(Guid IdTipoEvento, TipoEvento tipoEvento)
+    public async Task Atualizar(Guid IdTipoEvento, TipoEvento tipoEvento)
     {
-        throw new NotImplementedException();
+        var tipoEventoBuscado = await _context.TipoEvento.FindAsync(IdTipoEvento);
+        if(tipoEventoBuscado != null)
+        {
+            tipoEventoBuscado.TituloEvento = tipoEvento.TituloEvento;
+            _context.TipoEvento.Update(tipoEventoBuscado);
+            await _context.SaveChangesAsync();
+        }
     }
 
-    public Task<TipoEvento?> BuscarPorId(Guid IdTipoEvento)
+    public async Task<TipoEvento?> BuscarPorId(Guid IdTipoEvento)
     {
-        throw new NotImplementedException();
+        return await _context.TipoEvento.FirstOrDefaultAsync(t =>
+        t.IdTipoEvento == IdTipoEvento);
     }
 
     public async Task Cadastrar(TipoEvento tipoEvento)
@@ -30,9 +37,14 @@ public class TipoEventoRepository : ITipoEvento
         await _context.SaveChangesAsync();
     }
 
-    public Task Deletar(Guid IdTipoEvento)
+    public async Task Deletar(Guid IdTipoEvento)
     {
-        throw new NotImplementedException();
+        var tipoEventoBuscado = await _context.TipoEvento.FindAsync(IdTipoEvento);
+        if(tipoEventoBuscado != null)
+        {
+            _context.TipoEvento.Remove(tipoEventoBuscado);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public async Task<List<TipoEvento>> Listar()
