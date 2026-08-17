@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Models;
@@ -25,6 +26,7 @@ public partial class Usuario
 
     [StringLength(60)]
     [Unicode(false)]
+    [JsonIgnore] //Nunca serializa a senha na resposta
     public string Senha { get; set; } = null!;
 
     [InverseProperty("IdUsuarioNavigation")]

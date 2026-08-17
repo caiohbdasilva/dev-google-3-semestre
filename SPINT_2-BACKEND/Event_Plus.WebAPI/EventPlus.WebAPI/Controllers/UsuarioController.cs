@@ -32,15 +32,17 @@ public class UsuarioController : ControllerBase
         }
     }
 
-    public async Task<IActionResult> Cadastrar([FromBody] UsuarioDTO DTO)
+    [HttpPost]
+    public async Task<IActionResult> Cadastrar([FromBody] UsuarioDTOCadastro DTO)
     {
         try
         {
             var usuario = new Usuario
             {
-                Nome = DTO.NomeUsuario,
-                Email = DTO.EmailUsuario,
-                Senha = DTO.SenhaUsuario
+                Nome = DTO.nomeCadastrar,
+                Email = DTO.emailCadastrar,
+                Senha = DTO.senhaCadastrar, // Obs.: A criptografia ocorre dentro do Repository
+                IdTipoUsuario = DTO.IdTipoUsuario
             };
 
             await _usuario.Cadastrar(usuario);
@@ -50,5 +52,64 @@ public class UsuarioController : ControllerBase
         {
             return BadRequest(erro.Message);
         }
+
+    }
+
+    [HttpPatch("{Id:guid}")]
+    public async Task<IActionResult> Atualizar(Guid Id, [FromBody] UsuarioDTOAtualizar DTO)
+    {
+        var usuarioExistente = await _usuario.BuscarPorId(Id);
+
+        
+        if (DTO.nomeAtualizar != null)
+        {
+            usuarioExistente.Nome = DTO.nomeAtualizar;
+        }
+
+        if (DTO.senhaAtualizar != null)
+        {
+            usuarioExistente.Senha = DTO.senhaAtualizar;
+        }
+
+        if (DTO.emailAtualizar != null)
+        {
+            usuarioExistente.Email = DTO.emailAtualizar;
+        }
+
+        if (DTO.IdTipoUsuario != null)
+        {
+            usuarioExistente.IdTipoUsuario = DTO.IdTipoUsuario;
+        }
+
+        await _usuario.Atualizar(Id, usuarioExistente);
+
+        return Ok(usuarioExistente);
+    }
+
+
+    [HttpGet("{Id:guid}")]
+    public async Task<IActionResult> BuscarPorId(Guid Id)
+    {
+        try
+        {
+            var usuarioBuscado = await _usuario.BuscarPorId(Id);
+            if(usuarioBuscado == null)
+            {
+                return NotFound("Usuário não encontrado.");
+            }
+            return Ok(usuarioBuscado);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpDelete("{Id:guid}")]
+
+    public async Task<IActionResult> Deletar(Guid Id)
+    {
+        await _usuario.Deletar(Id);
+        return NoContent();
     }
 }

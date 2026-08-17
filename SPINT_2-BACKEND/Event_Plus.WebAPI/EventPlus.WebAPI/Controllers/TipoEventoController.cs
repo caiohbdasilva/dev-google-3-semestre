@@ -10,12 +10,12 @@ namespace EventPlus.WebAPI.Controllers
     [ApiController]
     public class TipoEventoController : ControllerBase
     {
-         private readonly ITipoEvento _tipoEvento;
+        private readonly ITipoEvento _tipoEvento;
 
-         public TipoEventoController(ITipoEvento tipoEvento)
-         {
-           _tipoEvento = tipoEvento;           
-         }
+        public TipoEventoController(ITipoEvento tipoEvento)
+        {
+            _tipoEvento = tipoEvento;
+        }
 
         [HttpGet]
         public async Task<IActionResult> Listar()

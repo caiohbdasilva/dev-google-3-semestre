@@ -1,6 +1,7 @@
 ﻿using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
+using EventPlus.WebAPI.Utils;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Repositories;
@@ -14,35 +15,80 @@ public class UsuarioRepository : IUsuario
     }
 
 
-    public Task Atualizar(Guid IdUsuario, Usuario usuario)
+    public async Task Atualizar(Guid IdUsuario, Usuario usuario)
     {
-        throw new NotImplementedException();
+        var usuarioBuscado = await _context.Usuario.FindAsync(IdUsuario);
+        if (usuarioBuscado != null)
+        {
+            usuarioBuscado.Nome = usuario.Nome;
+            usuarioBuscado.Email = usuario.Email;
+            usuarioBuscado.Senha = usuario.Senha;
+            usuarioBuscado.IdTipoUsuario = usuario.IdTipoUsuario;
+
+            if (!string.IsNullOrEmpty(usuario.Senha))
+            {
+                usuarioBuscado.Senha = Criptografia.GerarHash(usuario.Senha);
+            }
+            
+
+            _context.Usuario.Update(usuarioBuscado);
+            await _context.SaveChangesAsync();
+        }
 
     }
 
-    public Task<Usuario?> BuscarPorEmailESenha(string email, string senha)
+    public async Task<Usuario?> BuscarPorEmailESenha(string email, string senha)
     {
-        throw new NotImplementedException();
+        var usuario = await _context.Usuario
+            .Include(u => u.IdTipoUsuarioNavigation)
+            .FirstOrDefaultAsync(u => u.Email == email);
+
+        if (usuario == null)
+        {
+            return null;
+        }
+
+        //Verifica se a senha digitada corresponde ao hash salvo no banco
+        bool senhaValida = Criptografia.CompararHash(senha, usuario.Senha);
+
+        if (!senhaValida) // ! = Negação
+        {
+            return null;
+        }
+
+        return usuario;
     }
 
-    public Task<Usuario?> BuscarPorId(Guid IdUsuario)
+    public async Task<Usuario?> BuscarPorId(Guid IdUsuario)
     {
-        throw new NotImplementedException();
+        return await _context.Usuario.FirstOrDefaultAsync(u =>
+        u.IdUsuario == IdUsuario);
     }
 
     public async Task Cadastrar(Usuario usuario)
     {
+        //Criptografando a senha do usuário antes de salvar no banco de dados.
+        usuario.Senha = Criptografia.GerarHash(usuario.Senha);
         await _context.Usuario.AddAsync(usuario);
         await _context.SaveChangesAsync();
     }
 
-    public Task Deletar(Guid IdUsuario)
+    public async Task Deletar(Guid IdUsuario)
     {
-        throw new NotImplementedException();
+        var usuarioBuscado = await _context.Usuario.FindAsync(IdUsuario);
+        if (usuarioBuscado != null)
+        {
+            _context.Usuario.Remove(usuarioBuscado);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public async Task<List<Usuario>> Listar()
     {
-        return await _context.Usuario.AsNoTracking().ToListAsync();
+        //return await _context.Usuario.AsNoTracking().ToListAsync();
+        return await _context.Usuario
+            .Include(u => u.IdTipoUsuarioNavigation)
+            .AsNoTracking()
+            .ToListAsync();
     }
 }
