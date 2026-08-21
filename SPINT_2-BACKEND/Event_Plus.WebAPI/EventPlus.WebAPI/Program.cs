@@ -34,6 +34,8 @@ builder.Services.AddScoped<ITipoEvento, TipoEventoRepository>();
 
 builder.Services.AddScoped<IUsuario, UsuarioRepository>();
 
+builder.Services.AddScoped<IInstituicao, InstituicaoRepository>();
+
 
 
 ///Autenticação JWT 

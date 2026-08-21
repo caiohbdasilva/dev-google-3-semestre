@@ -8,5 +8,5 @@ public interface IInstituicao
     Task<List<Instituicao>> Listar();
     Task Atualizar(Guid IdInstituicao, Instituicao instituicao);
     Task Deletar (Guid IdInstituicao);
-    Task<Usuario?>BuscarPorId(Guid IdInstituicao);
+    Task<Instituicao?>BuscarPorId(Guid IdInstituicao);
 }

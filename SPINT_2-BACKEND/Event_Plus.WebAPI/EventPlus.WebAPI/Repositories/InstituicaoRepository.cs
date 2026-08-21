@@ -1,6 +1,7 @@
 ﻿using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Repositories;
 
@@ -11,19 +12,28 @@ public class InstituicaoRepository : IInstituicao
     {
         _context = context;
     }
-    public Task Atualizar(Guid IdInstituicao, Instituicao instituicao)
+    public async Task Atualizar(Guid IdInstituicao, Instituicao instituicao)
     {
-        throw new NotImplementedException();
+        var instituicaoBuscada = await _context.Instituicao.FindAsync(IdInstituicao);
+        if (instituicaoBuscada != null)
+        {
+            instituicaoBuscada.Cnpj = instituicao.Cnpj;
+            instituicaoBuscada.NomeFantasia = instituicao.NomeFantasia;
+            instituicaoBuscada.Endereco = instituicao.Endereco;
+            await _context.SaveChangesAsync();
+        }
     }
 
-    public Task<Usuario?> BuscarPorId(Guid IdInstituicao)
+    public async Task<Instituicao?> BuscarPorId(Guid IdInstituicao)
     {
-        throw new NotImplementedException();
+        return await _context.Instituicao.FirstOrDefaultAsync(i =>
+        i.IdInstituicao == IdInstituicao);
     }
 
-    public Task Cadastrar(Instituicao instituicao)
+    public async Task Cadastrar(Instituicao instituicao)
     {
-        throw new NotImplementedException();
+        await _context.Instituicao.AddAsync(instituicao);
+        await _context.SaveChangesAsync();
     }
 
     public Task Deletar(Guid IdInstituicao)
@@ -31,8 +41,8 @@ public class InstituicaoRepository : IInstituicao
         throw new NotImplementedException();
     }
 
-    public Task<List<Instituicao>> Listar()
+    public async Task<List<Instituicao>> Listar()
     {
-        throw new NotImplementedException();
+        return await _context.Instituicao.AsNoTracking().ToListAsync();
     }
 }
