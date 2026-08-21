@@ -1,7 +1,9 @@
 using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,9 +34,46 @@ builder.Services.AddScoped<ITipoEvento, TipoEventoRepository>();
 
 builder.Services.AddScoped<IUsuario, UsuarioRepository>();
 
+
+
+///Autenticação JWT 
+/// Configura como a API vai validar os tokens JWT enviados pelos clientes nas requisições.
+/// 
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidIssuer = "EventPlus.WebAPI", //Valida quem emitiu o token (Issuer)
+        ValidateAudience = true,
+        ValidAudience = "EventPlus.WebAPI", //Valida para quem o token foi emitido (Audience)
+        ValidateLifetime = true, //Valida se o token ainda é válido (expiração)
+        ClockSkew = TimeSpan.FromMinutes(5), //Valida a tolerância de tempo para expiração do token (ClockSkew) 
+        // Ele permite uma margem de erro de 5 minutos para compensar possíveis diferenças de horário entre o servidor e o cliente.
+        IssuerSigningKey = new SymmetricSecurityKey(//Valida a assinatura do token com a chave secreta definida na API
+            System.Text.Encoding.UTF8.GetBytes("eventos-chave-autenticacao-webapi-dev")
+        )
+    };
+});
+
+builder.Services.AddAuthorization(); //Adiciona o serviço de autorização para proteger endpoints com [Authorize]
+                                     // Ele é necessário para a data annotaion [Authorize] funcionar nos Controllers, permitindo que apenas usuários autenticados acessem determinados recursos da API.
+
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.UseHttpsRedirection(); // Redirecionamento de um HTTP para HTTPS, garantindo que todas as requisições sejam feitas de forma segura.
+
+app.UseAuthentication(); // Ativa a autenticação JWT para validar os tokens enviados pelos clientes nas requisições.
+
+app.UseAuthorization(); // Ativa a autorização para proteger endpoints com [Authorize], garantindo que apenas usuários autenticados possam acessar determinados recursos da API.
 
 app.MapControllers();
 //Mapeia as rotas definidas nos Controllers com os atributos [Route]: api/[controller]

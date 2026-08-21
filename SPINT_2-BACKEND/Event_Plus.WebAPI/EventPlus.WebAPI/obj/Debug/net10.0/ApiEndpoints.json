@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "EventPlus.WebAPI.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DTO",
+        "Type": "EventPlus.WebAPI.DTO.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EventPlus.WebAPI.Controllers.TipoEventoController",
     "Method": "Listar",
     "RelativePath": "api/TipoEvento",
