@@ -1,0 +1,132 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Usuario
+meta:
+  id: wrk_3134dc555bc74e4d9dbdd8a8b67ded94
+  created: 1786730047367
+  modified: 1786730047367
+  description: ""
+collection:
+  - url: https://localhost:7143/api/usuario
+    name: Buscar Todos
+    meta:
+      id: req_78820419bc26434c8d30632f045d6390
+      created: 1786730066542
+      modified: 1787333150170
+      isPrivate: false
+      description: ""
+      sortKey: -1786730066542
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/usuario
+    name: Cadastrar
+    meta:
+      id: req_fd403e46ce0540539b97e4625fc4879c
+      created: 1786734187530
+      modified: 1786979432866
+      isPrivate: false
+      description: ""
+      sortKey: -1786734187530
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"NomeUsuario":"teste2",
+        	"EmailUsuario":"teste2@gmail.com",
+          "SenhaUsuario":"teste1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/usuario/8314F95C-A49D-4B33-BB27-0C070484A075
+    name: Atualizar
+    meta:
+      id: req_6733f136e5dc41ea97d1600e3dc3e0a9
+      created: 1786979421894
+      modified: 1786993119820
+      isPrivate: false
+      description: ""
+      sortKey: -1786979421894
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "senhaAtualizar":"Helena123@"	
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/usuario/5424d229-4f77-470b-ac16-07f0603543f2
+    name: Deletar
+    meta:
+      id: req_404d1ce6e92748cba8424cac1a987070
+      created: 1786990589176
+      modified: 1787323658379
+      isPrivate: false
+      description: ""
+      sortKey: -1786990589176
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/usuario/5424d229-4f77-470b-ac16-07f0603543f2
+    name: Buscar por ID
+    meta:
+      id: req_e7f0a61c0a9a4f629e386eed3a4615f3
+      created: 1786990640487
+      modified: 1786990680297
+      isPrivate: false
+      description: ""
+      sortKey: -1786990640487
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1946b6e909ea0040a8320997db4c91c9dc1e62be
+    created: 1786730047374
+    modified: 1786730047374
+environments:
+  name: Base Environment
+  meta:
+    id: env_1946b6e909ea0040a8320997db4c91c9dc1e62be
+    created: 1786730047371
+    modified: 1786730047371
+    isPrivate: false

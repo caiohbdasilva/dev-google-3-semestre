@@ -1,0 +1,50 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Login
+meta:
+  id: wrk_5c9eedf215374dd4b34c4b91676ec918
+  created: 1787323589898
+  modified: 1787323589898
+  description: ""
+collection:
+  - url: https://localhost:7143/api/login
+    name: Fazer Login
+    meta:
+      id: req_11b56e4016c14c13959135f65a39a3c1
+      created: 1787323623252
+      modified: 1787339480588
+      isPrivate: false
+      description: ""
+      sortKey: -1787323623252
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email":"teste2@gmail.com",
+        	"senha":"teste1234"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_244c39bb9ecbd9903db2a538468364e3bce78fca
+    created: 1787323589911
+    modified: 1787323589911
+environments:
+  name: Base Environment
+  meta:
+    id: env_244c39bb9ecbd9903db2a538468364e3bce78fca
+    created: 1787323589905
+    modified: 1787323589905
+    isPrivate: false

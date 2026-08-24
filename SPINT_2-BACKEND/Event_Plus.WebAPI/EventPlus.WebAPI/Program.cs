@@ -1,6 +1,8 @@
 using EventPlus.WebAPI.BdContextEvent;
+using EventPlus.WebAPI.Controllers;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Repositories;
+using EventPlus.WebAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,7 +11,7 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 
-//Configuração do EF Core - Banco de dados para usar o SQL Server com a string de conexão do appsettings.json
+//Configuração do EF Core - Banco de dados para usar o SQL Server com a string de conexão do UserSecret
 builder.Services.AddDbContext<EventContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -35,6 +37,11 @@ builder.Services.AddScoped<ITipoEvento, TipoEventoRepository>();
 builder.Services.AddScoped<IUsuario, UsuarioRepository>();
 
 builder.Services.AddScoped<IInstituicao, InstituicaoRepository>();
+
+builder.Services.AddScoped<IEvento, EventoRepository>();
+
+builder.Services.AddScoped<IClaudinaryService, ClaudinaryService>();
+
 
 
 
