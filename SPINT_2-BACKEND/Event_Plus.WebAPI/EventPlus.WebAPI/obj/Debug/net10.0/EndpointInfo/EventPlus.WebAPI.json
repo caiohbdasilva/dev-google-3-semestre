@@ -277,6 +277,18 @@
         }
       }
     },
+    "/api/Inscricao": {
+      "get": {
+        "tags": [
+          "Inscricao"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Instituicao": {
       "get": {
         "tags": [
@@ -977,6 +989,9 @@
   "tags": [
     {
       "name": "Evento"
+    },
+    {
+      "name": "Inscricao"
     },
     {
       "name": "Instituicao"

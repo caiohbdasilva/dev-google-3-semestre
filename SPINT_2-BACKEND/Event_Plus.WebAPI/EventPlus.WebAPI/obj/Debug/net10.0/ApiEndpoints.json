@@ -181,6 +181,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EventPlus.WebAPI.Controllers.InscricaoController",
+    "Method": "Listar",
+    "RelativePath": "api/Inscricao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EventPlus.WebAPI.Controllers.InstituicaoController",
     "Method": "Listar",
     "RelativePath": "api/Instituicao",

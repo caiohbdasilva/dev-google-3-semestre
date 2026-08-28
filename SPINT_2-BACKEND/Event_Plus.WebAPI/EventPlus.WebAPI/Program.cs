@@ -58,6 +58,8 @@ builder.Services.AddScoped<IInstituicao, InstituicaoRepository>();
 
 builder.Services.AddScoped<IEvento, EventoRepository>();
 
+builder.Services.AddScoped<IInscricao, InscricaoRepository>();
+
 builder.Services.AddScoped<IClaudinaryService, ClaudinaryService>();
 
 
