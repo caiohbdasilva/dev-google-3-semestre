@@ -6,9 +6,27 @@ using EventPlus.WebAPI.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Adicionando Swagger
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        Description = "Insira um token válido para ter acesso aos endpoints da API."
+    });
+
+    options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
+    {
+        [new OpenApiSecuritySchemeReference("Bearer", document)] = []
+    });
+});
 
 
 //Configuração do EF Core - Banco de dados para usar o SQL Server com a string de conexão do UserSecret
@@ -79,6 +97,12 @@ builder.Services.AddAuthorization(); //Adiciona o serviço de autorização para
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection(); // Redirecionamento de um HTTP para HTTPS, garantindo que todas as requisições sejam feitas de forma segura.
 

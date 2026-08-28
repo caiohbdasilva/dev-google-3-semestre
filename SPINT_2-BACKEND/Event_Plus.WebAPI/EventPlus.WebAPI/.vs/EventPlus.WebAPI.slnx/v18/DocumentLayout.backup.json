@@ -3,52 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\repositories\\eventorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:repositories\\eventorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:controllers\\eventocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\eventplus.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:eventplus.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:models\\evento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\services\\claudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:services\\claudinaryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\dto\\eventodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:dto\\eventodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\interfaces\\ievento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:interfaces\\ievento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\dto\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:dto\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\models\\presenca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:models\\presenca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\bdcontextevent\\eventcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:bdcontextevent\\eventcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:interfaces\\iusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,79 +33,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 399,
+          "DockedWidth": 12,
           "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClaudinaryService.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Services\\ClaudinaryService.cs",
-              "RelativeDocumentMoniker": "Services\\ClaudinaryService.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Services\\ClaudinaryService.cs",
-              "RelativeToolTip": "Services\\ClaudinaryService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAkwBIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T14:14:25.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAQwGwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T18:03:12.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Interfaces\\IUsuario.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IUsuario.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Interfaces\\IUsuario.cs",
-              "RelativeToolTip": "Interfaces\\IUsuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T18:03:14.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\UsuarioRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\UsuarioRepository.cs",
-              "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T18:03:27.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UsuarioDTO.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\UsuarioDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\UsuarioDTO.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\UsuarioDTO.cs",
-              "RelativeToolTip": "DTO\\UsuarioDTO.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-24T18:03:09.287Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 636,
-          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -137,33 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventoController.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\EventoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EventoController.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\EventoController.cs",
-              "RelativeToolTip": "Controllers\\EventoController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAA3wJUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T12:06:17.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\EventoRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\EventoRepository.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\EventoRepository.cs*",
-              "RelativeToolTip": "Repositories\\EventoRepository.cs*",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAwFEAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T12:06:31.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "IEvento.cs",
               "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Interfaces\\IEvento.cs",
               "RelativeDocumentMoniker": "Interfaces\\IEvento.cs",
@@ -177,54 +56,46 @@
           ]
         },
         {
-          "DockedWidth": 17,
+          "DockedWidth": 641,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventoDTO.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\EventoDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\EventoDTO.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\EventoDTO.cs",
-              "RelativeToolTip": "DTO\\EventoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T12:06:52.69Z",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-28T17:49:28.628Z",
               "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "3feb746c-6c47-4a5d-8432-6c4842f71f67",
-        "Display": 0,
-        "X": 899,
-        "Y": 361,
-        "Width": 964,
-        "Height": 729,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EventContext.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\BdContextEvent\\EventContext.cs",
-              "RelativeDocumentMoniker": "BdContextEvent\\EventContext.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\BdContextEvent\\EventContext.cs",
-              "RelativeToolTip": "BdContextEvent\\EventContext.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAGQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T12:26:24.039Z",
+              "WhenOpened": "2026-08-28T17:32:51.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventPlus.WebAPI",
+              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\EventPlus.WebAPI.csproj",
+              "RelativeDocumentMoniker": "EventPlus.WebAPI.csproj",
+              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\EventPlus.WebAPI.csproj",
+              "RelativeToolTip": "EventPlus.WebAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-28T17:28:46.41Z",
               "EditorCaption": ""
             }
           ]
@@ -250,20 +121,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Presenca.cs",
               "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Models\\Presenca.cs",
               "RelativeDocumentMoniker": "Models\\Presenca.cs",
               "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Models\\Presenca.cs",
               "RelativeToolTip": "Models\\Presenca.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-28T13:07:04.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Evento.cs",
               "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Models\\Evento.cs",
               "RelativeDocumentMoniker": "Models\\Evento.cs",
