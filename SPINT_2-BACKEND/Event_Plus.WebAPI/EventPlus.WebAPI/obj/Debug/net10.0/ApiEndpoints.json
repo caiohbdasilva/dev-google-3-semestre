@@ -1,5 +1,51 @@
 [
   {
+    "ContainingType": "EventPlus.WebAPI.Controllers.EventoController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Evento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Nome",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Descricao",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DataEvento",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImagemUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ArquivoImagem",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdTipoEvento",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdInstituicao",
+        "Type": "System.Nullable\u00601[[System.Guid, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EventPlus.WebAPI.Controllers.InstituicaoController",
     "Method": "Listar",
     "RelativePath": "api/Instituicao",
@@ -19,7 +65,7 @@
     "Parameters": [
       {
         "Name": "DTO",
-        "Type": "EventPlus.WebAPI.DTO.InstituicaoDTO",
+        "Type": "EventPlus.WebAPI.DTO.InstituicaoDTOCadastrar",
         "IsRequired": true
       }
     ],
@@ -30,6 +76,43 @@
     "Method": "BuscarPorId",
     "RelativePath": "api/Instituicao/{Id}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlus.WebAPI.Controllers.InstituicaoController",
+    "Method": "Atualizar",
+    "RelativePath": "api/Instituicao/{Id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "DTO",
+        "Type": "EventPlus.WebAPI.DTO.InstituicaoDTOAtualizar",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventPlus.WebAPI.Controllers.InstituicaoController",
+    "Method": "Deletar",
+    "RelativePath": "api/Instituicao/{Id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

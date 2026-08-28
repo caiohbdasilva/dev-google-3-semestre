@@ -74,6 +74,29 @@ public class InstituicaoController : ControllerBase
     {
         var instituicaoExistente = await _instituicao.BuscarPorId(Id);
 
+        if (DTO.nomeFantasia != null)
+        {
+            instituicaoExistente.NomeFantasia = DTO.nomeFantasia;
+        }
+        if (DTO.endereco != null)
+        {
+            instituicaoExistente.Endereco = DTO.endereco;
+        }
+        if (DTO.CNPJ != null)
+        {
+            instituicaoExistente.Cnpj = DTO.CNPJ;
+        }
 
+        await _instituicao.Atualizar(Id, instituicaoExistente);
+
+        return Ok(instituicaoExistente);
+    }
+
+    [HttpDelete("{Id:guid}")]
+
+    public async Task<IActionResult> Deletar(Guid Id)
+    {
+    await _instituicao.Deletar(Id);
+    return NoContent();
     }
 }

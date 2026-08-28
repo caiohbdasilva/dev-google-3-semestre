@@ -15,9 +15,10 @@ public class EventoRepository : IEvento
         _context = context;
     }
 
-    public Task Cadastrar(Evento evento)
+    public async Task Cadastrar(Evento evento)
     {
-        throw new NotImplementedException();
+        await _context.Evento.AddAsync(evento);
+        await _context.SaveChangesAsync();
     }
 
     Task IEvento.Atualizar(Guid id, Evento evento)

@@ -36,9 +36,14 @@ public class InstituicaoRepository : IInstituicao
         await _context.SaveChangesAsync();
     }
 
-    public Task Deletar(Guid IdInstituicao)
+    public async Task Deletar(Guid IdInstituicao)
     {
-        throw new NotImplementedException();
+        var instituicaoBuscada = await _context.Instituicao.FindAsync(IdInstituicao);
+        if (instituicaoBuscada != null)
+        {
+            _context.Instituicao.Remove(instituicaoBuscada);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public async Task<List<Instituicao>> Listar()

@@ -17,10 +17,10 @@ public class InstituicaoDTOCadastrar
 public class InstituicaoDTOAtualizar
 {
 
-    public string? nomeFantasia { get; set; } = string.Empty;
+    public string? nomeFantasia { get; set; } 
 
   
-    public string? CNPJ { get; set; } = string.Empty;
+    public string? CNPJ { get; set; } 
 
-    public string? endereco { get; set; } = string.Empty;
+    public string? endereco { get; set; }
 }

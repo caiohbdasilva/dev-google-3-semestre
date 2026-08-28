@@ -1,8 +1,8 @@
 using EventPlus.WebAPI.BdContextEvent;
-using EventPlus.WebAPI.Controllers;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Repositories;
 using EventPlus.WebAPI.Services;
+using EventPlus.WebAPI.Utils;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -66,10 +66,12 @@ builder.Services.AddAuthentication(options =>
         ClockSkew = TimeSpan.FromMinutes(5), //Valida a tolerância de tempo para expiração do token (ClockSkew) 
         // Ele permite uma margem de erro de 5 minutos para compensar possíveis diferenças de horário entre o servidor e o cliente.
         IssuerSigningKey = new SymmetricSecurityKey(//Valida a assinatura do token com a chave secreta definida na API
-            System.Text.Encoding.UTF8.GetBytes("eventos-chave-autenticacao-webapi-dev")
+            System.Text.Encoding.UTF8.GetBytes("Jwt:Key")
         )
     };
 });
+
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 
 builder.Services.AddAuthorization(); //Adiciona o serviço de autorização para proteger endpoints com [Authorize]
                                      // Ele é necessário para a data annotaion [Authorize] funcionar nos Controllers, permitindo que apenas usuários autenticados acessem determinados recursos da API.

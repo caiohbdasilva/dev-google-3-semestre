@@ -1,4 +1,5 @@
 ﻿using EventPlus.WebAPI.DTO;
+using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,17 +11,17 @@ namespace EventPlus.WebAPI.Controllers;
 public class EventoController : ControllerBase
 {
     private readonly IEvento _evento;
-    private readonly IClaudinaryService _claudinaryService;
+    private readonly IClaudinaryService _claudinary;
 
-    public EventoController(IEvento evento, IClaudinaryService claudinaryService)
+    public EventoController(IEvento evento, IClaudinaryService claudinary)
     {
         _evento = evento;
-        _claudinaryService = claudinaryService;
+        _claudinary = claudinary;
     }
 
     [HttpPost]
     [Consumes("multipart/form-data")]
-    public async Task<IActionResult> Cadastrar([FromBody]EventoDTO DTO)
+    public async Task<IActionResult> Cadastrar([FromForm]EventoDTO DTO)
     {
         try
         {
@@ -28,7 +29,7 @@ public class EventoController : ControllerBase
 
             if (DTO.ArquivoImagem is not null)
             {
-                ImagemUrl = await _claudinaryService.UploadImagem(DTO.ArquivoImagem);
+                ImagemUrl = await _claudinary.UploadImagem(DTO.ArquivoImagem);
             }
             var evento = new Evento
             {
