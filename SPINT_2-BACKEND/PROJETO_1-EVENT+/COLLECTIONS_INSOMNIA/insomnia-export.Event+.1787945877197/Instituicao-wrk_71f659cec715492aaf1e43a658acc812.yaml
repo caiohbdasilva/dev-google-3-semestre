@@ -1,0 +1,114 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Instituicao
+meta:
+  id: wrk_71f659cec715492aaf1e43a658acc812
+  created: 1787333117063
+  modified: 1787333117063
+  description: ""
+collection:
+  - url: https://localhost:7143/api/instituicao
+    name: Buscar todos
+    meta:
+      id: req_cd3569f85f19443bb0b7244e23c312ad
+      created: 1787333156432
+      modified: 1787935096152
+      isPrivate: false
+      description: ""
+      sortKey: -1787333156432
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/instituicao/ac075057-4bc5-43b5-a79b-6df757e7409d
+    name: Buscar por ID
+    meta:
+      id: req_b4e50d914f0743228e838b02deedca9b
+      created: 1787334608908
+      modified: 1787339485512
+      isPrivate: false
+      description: ""
+      sortKey: -1787334608908
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/instituicao
+    name: Cadastrar
+    meta:
+      id: req_9fb5bf144da942e4ab698279da7a4aa6
+      created: 1787339349481
+      modified: 1787597191137
+      isPrivate: false
+      description: ""
+      sortKey: -1787339349481
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nomeFantasia":"teste",
+        	"CNPJ":"00000000000010",
+        	"endereco":"Rua teste, 40028922, testelandia"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/instituicao/29924014-ff4a-4de0-85e6-3edd3ee0c111
+    name: Atualizar
+    meta:
+      id: req_20f1e62c2f6940e299c64dbf2836819a
+      created: 1787340230998
+      modified: 1787918344177
+      isPrivate: false
+      description: ""
+      sortKey: -1787340230998
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nomeFantasia":"teste2"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_31ef777d4aacc1b52d84fbc52296d1dfbb121a3e
+    created: 1787333117077
+    modified: 1787333117077
+environments:
+  name: Base Environment
+  meta:
+    id: env_31ef777d4aacc1b52d84fbc52296d1dfbb121a3e
+    created: 1787333117073
+    modified: 1787333117073
+    isPrivate: false

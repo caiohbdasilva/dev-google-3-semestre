@@ -1,0 +1,130 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: TipoEvento
+meta:
+  id: wrk_df651efae0be4f2d966315aebd6fbc13
+  created: 1786391296677
+  modified: 1786391296677
+  description: ""
+collection:
+  - url: https://localhost:7143/api/TipoEvento
+    name: Buscar Todos
+    meta:
+      id: req_6fc0e69ed14d4e079655679e8b28c4e9
+      created: 1786391304847
+      modified: 1786707892999
+      isPrivate: false
+      description: ""
+      sortKey: -1786391304847
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoEvento
+    name: Cadastrar
+    meta:
+      id: req_055e6fc9ae9548aa863a93ba7b7f64bd
+      created: 1786391950421
+      modified: 1786392004140
+      isPrivate: false
+      description: ""
+      sortKey: -1786391950421
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"TituloTipoEvento": "Teste"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoEvento/357ac1c9-ffe4-4e1d-8e72-dabc853a58b7
+    name: Buscar por ID
+    meta:
+      id: req_74caf5a92ead4e48ad4009c3dd022024
+      created: 1786707868944
+      modified: 1786728355144
+      isPrivate: false
+      description: ""
+      sortKey: -1786707868944
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoEvento/357ac1c9-ffe4-4e1d-8e72-dabc853a58b7
+    name: Deletar
+    meta:
+      id: req_9ef1d352417b44b8a76c51cffb7a90af
+      created: 1786708284571
+      modified: 1786728319841
+      isPrivate: false
+      description: ""
+      sortKey: -1786708284571
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoEvento/357ac1c9-ffe4-4e1d-8e72-dabc853a58b7
+    name: Atualizar
+    meta:
+      id: req_3a961e0d6bc4479fb26d35691797ca84
+      created: 1786725006775
+      modified: 1786728380963
+      isPrivate: false
+      description: ""
+      sortKey: -1786725006775
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"TituloTipoEvento": "Palestra"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_03b9ac7c65c6c4df12e3b5ffd7861508b4a0b402
+    created: 1786391296682
+    modified: 1786391296682
+environments:
+  name: Base Environment
+  meta:
+    id: env_03b9ac7c65c6c4df12e3b5ffd7861508b4a0b402
+    created: 1786391296680
+    modified: 1786391296680
+    isPrivate: false

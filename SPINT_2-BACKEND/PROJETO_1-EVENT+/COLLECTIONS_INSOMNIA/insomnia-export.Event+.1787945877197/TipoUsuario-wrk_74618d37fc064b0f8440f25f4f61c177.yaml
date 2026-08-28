@@ -1,0 +1,136 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: TipoUsuario
+meta:
+  id: wrk_74618d37fc064b0f8440f25f4f61c177
+  created: 1786364665397
+  modified: 1786391273887
+  description: ""
+collection:
+  - url: https://localhost:7143/api/TipoUsuario
+    name: Buscar Todos
+    meta:
+      id: req_19370b9702d04a6ab37d9390478a42ca
+      created: 1786373099978
+      modified: 1786391285266
+      isPrivate: false
+      description: ""
+      sortKey: -1786373099978
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoUsuario
+    name: Cadastrar
+    meta:
+      id: req_a2b8c391821343a0abc2a715e3eb3076
+      created: 1786373114737
+      modified: 1786387817028
+      isPrivate: false
+      description: ""
+      sortKey: -1786373114737
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"TituloTipoUsuario": "Teste"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoUsuario/4962a100-8196-476b-a9ef-75d43e208688
+    name: Buscar Por ID
+    meta:
+      id: req_f84f0082cbe64f6eb6f643a894878613
+      created: 1786375094419
+      modified: 1786715567602
+      isPrivate: false
+      description: ""
+      sortKey: -1786375094419
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoUsuario/65a430e2-e95b-4dfb-85de-5369c18aabfa
+    name: Deletar
+    meta:
+      id: req_d018d8c140944926b8f3d4c6383547b3
+      created: 1786382136680
+      modified: 1786387658576
+      isPrivate: false
+      description: ""
+      sortKey: -1786382136680
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: https://localhost:7143/api/TipoUsuario/4962a100-8196-476b-a9ef-75d43e208688
+    name: Atualizar
+    meta:
+      id: req_da22430bd2e94fbea30fb1bb4f6ad026
+      created: 1786387410217
+      modified: 1786388480509
+      isPrivate: false
+      description: ""
+      sortKey: -1786387410217
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"TituloTipoUsuario": "teste123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_615626890a830a2164e1162c31af75400d578327
+    created: 1786373069067
+    modified: 1786373069067
+environments:
+  name: Base Environment
+  meta:
+    id: env_615626890a830a2164e1162c31af75400d578327
+    created: 1786364665401
+    modified: 1786373069030
+    isPrivate: false
