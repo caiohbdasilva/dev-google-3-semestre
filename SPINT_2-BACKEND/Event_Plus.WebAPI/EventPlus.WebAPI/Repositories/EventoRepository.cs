@@ -2,6 +2,7 @@
 using EventPlus.WebAPI.Controllers;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Repositories;
 
@@ -21,38 +22,66 @@ public class EventoRepository : IEvento
         await _context.SaveChangesAsync();
     }
 
-    Task IEvento.Atualizar(Guid id, Evento evento)
+    public async Task Atualizar(Guid IdEvento, Evento evento)
     {
-        throw new NotImplementedException();
+        var eventoBuscado = await _context.Evento.FindAsync(IdEvento);
+        if (eventoBuscado != null)
+        {
+            eventoBuscado.NomeEvento = evento.NomeEvento;
+            eventoBuscado.DescricaoEvento = evento.DescricaoEvento;
+            eventoBuscado.DataEvento = evento.DataEvento;
+            eventoBuscado.Urlimagem = evento.Urlimagem;
+            eventoBuscado.IdInstituicao = evento.IdInstituicao;
+            eventoBuscado.IdTipoEvento = evento.IdTipoEvento;
+        }
+        _context.Evento.Update(eventoBuscado);
+        await _context.SaveChangesAsync();
     }
 
-    Task<Evento?> IEvento.BuscarPorId(Guid id)
+    public async Task<Evento?> BuscarPorId(Guid IdEvento)
     {
-        throw new NotImplementedException();
+        return await _context.Evento.FirstOrDefaultAsync(e =>
+        e.IdEvento == IdEvento);
     }
 
-    Task IEvento.Deletar(Guid id)
+    public async Task Deletar(Guid IdEvento)
     {
-        throw new NotImplementedException();
+        var eventoBuscado = await _context.Evento.FindAsync(IdEvento);
+        if (eventoBuscado != null)
+        {
+            _context.Evento.Remove(eventoBuscado);
+            await _context.SaveChangesAsync();
+        }
     }
 
-    Task<List<Evento>> IEvento.Listar()
+    public async Task<List<Evento>> Listar()
     {
-        throw new NotImplementedException();
+        return await _context.Evento.AsNoTracking().ToListAsync();
     }
 
-    Task<List<Evento>> IEvento.ListarPorInscrito(Guid id)
+    public async Task<List<Evento>> ListarPorInscrito(Guid id)
     {
-        throw new NotImplementedException();
+        return await _context.Evento.Where(e => 
+        e.Presenca.Any(p => 
+        p.IdUsuario == id)).
+        AsNoTracking().
+        ToListAsync();
     }
 
-    Task<List<Evento>> IEvento.ListarPorInstituicao(Guid idInstituicao)
+    public async Task<List<Evento>> ListarPorInstituicao(Guid idInstituicao)
     {
-        throw new NotImplementedException();
+        return await _context.Evento.Where(e =>
+        e.IdInstituicao == idInstituicao).
+        AsNoTracking().
+        ToListAsync();
     }
 
-    Task<List<Evento>> IEvento.ListarProximoEvento()
+    public async Task<List<Evento>> ListarProximoEvento()
     {
-        throw new NotImplementedException();
+        return await _context.Evento.Where( e=>
+        e.DataEvento >= DateTime.Today).
+        OrderBy(e => e.DataEvento).
+        AsNoTracking().
+        ToListAsync();
     }
 }

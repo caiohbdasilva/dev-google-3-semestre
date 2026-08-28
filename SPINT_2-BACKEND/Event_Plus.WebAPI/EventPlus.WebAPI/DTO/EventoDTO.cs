@@ -2,7 +2,7 @@
 
 namespace EventPlus.WebAPI.DTO;
 
-public class EventoDTO
+public class EventoDTOCadastrar
 {
     [Required(ErrorMessage = "O nome do evento é obrigatório.")]
     [StringLength(100, ErrorMessage = "O nome pode ter no máximo 100 caracteres.")]
@@ -13,6 +13,27 @@ public class EventoDTO
 
     [Required(ErrorMessage = "A data do evento é obrigatória.")]
     public DateTime DataEvento { get; set; }
+
+    public string? ImagemUrl { get; set; }
+
+    public IFormFile? ArquivoImagem { get; set; }
+
+    public Guid? IdTipoEvento { get; set; }
+
+    public Guid? IdInstituicao { get; set; }
+}
+
+public class EventoDTOAtualizar
+{
+    
+    [StringLength(100, ErrorMessage = "O nome pode ter no máximo 100 caracteres.")]
+    public string? Nome { get; set; }
+
+    
+    public string? Descricao { get; set; } 
+
+    
+    public DateTime? DataEvento { get; set; }
 
     public string? ImagemUrl { get; set; }
 
