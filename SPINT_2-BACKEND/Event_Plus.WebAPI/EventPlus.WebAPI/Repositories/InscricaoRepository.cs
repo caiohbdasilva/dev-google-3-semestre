@@ -15,14 +15,21 @@ public class InscricaoRepository : IInscricao
         _context = context;
     }
 
-    public Task AtualizarSituacao(Guid IdPresenca, bool situacao)
+    public async Task AtualizarSituacao(Guid IdPresenca, bool situacao)
     {
-        throw new NotImplementedException();
+        var presencaBuscada = await _context.Presenca.FindAsync(IdPresenca);
+        if (presencaBuscada != null)
+        {
+            presencaBuscada.Situacao = situacao;
+            _context.Presenca.Update(presencaBuscada);
+            await _context.SaveChangesAsync();
+        }
     }
 
-    public Task<Presenca?> BuscarPorId(Guid IdPresenca)
+    public async Task<Presenca?> BuscarPorId(Guid IdPresenca)
     {
-        throw new NotImplementedException();
+        return await _context.Presenca.FirstOrDefaultAsync(p =>
+            p.IdPresenca == IdPresenca);
     }
 
     public Task Deletar(Guid IdPresenca)
@@ -30,14 +37,15 @@ public class InscricaoRepository : IInscricao
         throw new NotImplementedException();
     }
 
-    public Task Inscrever(Presenca presenca)
+    public async Task Inscrever(Presenca presenca)
     {
-        throw new NotImplementedException();
+        await _context.Presenca.AddAsync(presenca);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<List<Presenca>> Listar()
     {
-        return await _context.Presenca.AsNoTracking().ToListAsync();
+        return await _context.Presenca.AsNoTracking().ToListAsync();    
     }
 
     public Task<List<Presenca>> ListarMinhasPresencas(Guid IdUsuario)
