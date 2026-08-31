@@ -105,7 +105,8 @@ builder.Services.AddHttpClient<IModerationService, SightengineModerationService>
 });
 
 builder.Services.AddAuthorization(); //Adiciona o serviço de autorização para proteger endpoints com [Authorize]
-                                     // Ele é necessário para a data annotaion [Authorize] funcionar nos Controllers, permitindo que apenas usuários autenticados acessem determinados recursos da API.
+                                     //Ele é necessário para a data annotation [Authorize] funcionar nos Controllers, 
+                                     //permitindo que apenas usuários autenticados acessem determinados recursos da API.
 
 builder.Services.AddControllers();
 

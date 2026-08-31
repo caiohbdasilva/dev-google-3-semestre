@@ -7,36 +7,8 @@
       "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\repositories\\inscricaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:repositories\\inscricaorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\services\\sightenginemoderationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:services\\sightenginemoderationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\controllers\\comentariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:controllers\\comentariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\repositories\\comentariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:repositories\\comentariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\interfaces\\imoderationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:interfaces\\imoderationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\dto\\comentariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:dto\\comentariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\controllers\\inscricaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:controllers\\inscricaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\dto\\presencadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:dto\\presencadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\event_plus.webapi\\eventplus.webapi\\controllers\\tipousuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D0A8F16-7BF1-B047-59F4-FDD5E20192AA}|EventPlus.WebAPI.csproj|solutionrelative:controllers\\tipousuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 11,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,80 +27,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 11,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InscricaoController.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\InscricaoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InscricaoController.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\InscricaoController.cs",
-              "RelativeToolTip": "Controllers\\InscricaoController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwEoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T19:22:58.25Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InscricaoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\InscricaoRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\InscricaoRepository.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\InscricaoRepository.cs",
-              "RelativeToolTip": "Repositories\\InscricaoRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCcAAAAyAAAAAAAAAA==",
+              "Title": "TipoUsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\TipoUsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TipoUsuarioController.cs",
+              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\TipoUsuarioController.cs",
+              "RelativeToolTip": "Controllers\\TipoUsuarioController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAowCwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T19:18:33.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PresencaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\PresencaDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\PresencaDTO.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\PresencaDTO.cs",
-              "RelativeToolTip": "DTO\\PresencaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T12:59:03.182Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 11,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SightengineModerationService.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Services\\SightengineModerationService.cs",
-              "RelativeDocumentMoniker": "Services\\SightengineModerationService.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Services\\SightengineModerationService.cs",
-              "RelativeToolTip": "Services\\SightengineModerationService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAADcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T14:09:26.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IModerationService.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Interfaces\\IModerationService.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IModerationService.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Interfaces\\IModerationService.cs",
-              "RelativeToolTip": "Interfaces\\IModerationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T13:56:49.801Z",
+              "WhenOpened": "2026-08-31T18:17:07.926Z",
               "EditorCaption": ""
             },
             {
@@ -139,47 +49,9 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAACEAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T13:53:54.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ComentarioDTO.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\ComentarioDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\ComentarioDTO.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\DTO\\ComentarioDTO.cs",
-              "RelativeToolTip": "DTO\\ComentarioDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T13:23:56.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ComentarioController.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\ComentarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ComentarioController.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Controllers\\ComentarioController.cs",
-              "RelativeToolTip": "Controllers\\ComentarioController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAMwD0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T13:23:05.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ComentarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\ComentarioRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ComentarioRepository.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\Event_Plus.WebAPI\\EventPlus.WebAPI\\Repositories\\ComentarioRepository.cs",
-              "RelativeToolTip": "Repositories\\ComentarioRepository.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAIwDYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T13:14:35.541Z",
+              "WhenOpened": "2026-08-31T18:12:30.5Z",
               "EditorCaption": ""
             }
           ]
