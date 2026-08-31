@@ -57,15 +57,23 @@ public class InscricaoController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Inscrever([FromBody]PresencaDTOInscricao dto)
     {
-        var presenca = new Presenca
+        try
         {
-            IdEvento = dto.IdEvento,
-            IdUsuario = dto.IdUsuario,
-            Situacao = true
-        };
+            var presenca = new Presenca
+            {
+                IdEvento = dto.IdEvento,
+                IdUsuario = dto.IdUsuario,
+                Situacao = true
+            };
 
-        await _inscricao.Inscrever(presenca);
-        return StatusCode(201, presenca);
+            await _inscricao.Inscrever(presenca);
+            return StatusCode(201, presenca);
+        }
+        catch (Exception e)
+        {
+
+            return BadRequest(e.Message);
+        }
     }
 
     [HttpPut("{Id:guid}")]

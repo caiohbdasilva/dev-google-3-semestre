@@ -60,6 +60,8 @@ builder.Services.AddScoped<IEvento, EventoRepository>();
 
 builder.Services.AddScoped<IInscricao, InscricaoRepository>();
 
+builder.Services.AddScoped<IComentario, ComentarioRepository>();
+
 builder.Services.AddScoped<IClaudinaryService, ClaudinaryService>();
 
 
@@ -92,6 +94,15 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
+
+
+// --- Sightengine (plano Free, sem cartão) ---
+builder.Services.Configure<SightengineSettings>(builder.Configuration.GetSection("Sightengine"));
+
+builder.Services.AddHttpClient<IModerationService, SightengineModerationService>(client =>
+{
+    client.BaseAddress = new Uri("https://api.sightengine.com/1.0/");
+});
 
 builder.Services.AddAuthorization(); //Adiciona o serviço de autorização para proteger endpoints com [Authorize]
                                      // Ele é necessário para a data annotaion [Authorize] funcionar nos Controllers, permitindo que apenas usuários autenticados acessem determinados recursos da API.
