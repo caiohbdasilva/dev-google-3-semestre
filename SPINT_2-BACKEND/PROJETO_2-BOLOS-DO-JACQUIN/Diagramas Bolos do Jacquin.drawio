@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" pages="3">
+  <diagram name="DER (Diagrama Entidade-Relacionamento)" id="zfYAnwjVbot0PY8rQaS9">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Avaliação" vertex="1">
+          <mxGeometry height="60" width="120" x="525" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-10" edge="1" parent="1" source="ackTGG9BuX8DxGz9tN8k-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ackTGG9BuX8DxGz9tN8k-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Usuário" vertex="1">
+          <mxGeometry height="60" width="120" x="180" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-11" edge="1" parent="1" source="ackTGG9BuX8DxGz9tN8k-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ackTGG9BuX8DxGz9tN8k-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-13" edge="1" parent="1" source="ackTGG9BuX8DxGz9tN8k-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ackTGG9BuX8DxGz9tN8k-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Produto" vertex="1">
+          <mxGeometry height="60" width="120" x="870" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Categoria" vertex="1">
+          <mxGeometry height="60" width="120" x="870" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-9" edge="1" parent="1" source="ackTGG9BuX8DxGz9tN8k-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ackTGG9BuX8DxGz9tN8k-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-5" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;align=center;" value="realiza" vertex="1">
+          <mxGeometry height="60" width="120" x="353" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-8" edge="1" parent="1" source="ackTGG9BuX8DxGz9tN8k-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ackTGG9BuX8DxGz9tN8k-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-6" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;align=center;" value="recebe" vertex="1">
+          <mxGeometry height="60" width="120" x="698" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-14" edge="1" parent="1" source="ackTGG9BuX8DxGz9tN8k-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="ackTGG9BuX8DxGz9tN8k-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-12" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;align=center;" value="tem" vertex="1">
+          <mxGeometry height="60" width="120" x="870" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="820" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="n" vertex="1">
+          <mxGeometry height="30" width="60" x="638" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="n" vertex="1">
+          <mxGeometry height="30" width="60" x="473" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ackTGG9BuX8DxGz9tN8k-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="290" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="sQDVnjeESLf8FpzvaUzn-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="930" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="sQDVnjeESLf8FpzvaUzn-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="n" vertex="1">
+          <mxGeometry height="30" width="60" x="930" y="330" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="6Znjck7xRp6zi-5-0EZT" name="Página-2">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="OlnU_0MnkLUu3ntjXZcV" name="Página-3">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
