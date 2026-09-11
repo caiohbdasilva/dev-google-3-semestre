@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\45797375800\\Desktop\\dev-google-terceiro-semestre\\SPRINT_1-REVISAO_E_NIVELAMENTO\\AULA_2-POO\\SISTEMA-BANCARIO\\SISTEMA-BANCARIO.csproj",
+      "projectUniqueName": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPRINT_1-REVISAO_E_NIVELAMENTO\\AULA_2-POO\\SISTEMA-BANCARIO\\SISTEMA-BANCARIO.csproj",
       "projectName": "SISTEMA-BANCARIO",
-      "projectPath": "C:\\Users\\45797375800\\Desktop\\dev-google-terceiro-semestre\\SPRINT_1-REVISAO_E_NIVELAMENTO\\AULA_2-POO\\SISTEMA-BANCARIO\\SISTEMA-BANCARIO.csproj",
+      "projectPath": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPRINT_1-REVISAO_E_NIVELAMENTO\\AULA_2-POO\\SISTEMA-BANCARIO\\SISTEMA-BANCARIO.csproj",
       "packagesPath": "C:\\Users\\45797375800\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\45797375800\\Desktop\\dev-google-terceiro-semestre\\SPRINT_1-REVISAO_E_NIVELAMENTO\\AULA_2-POO\\SISTEMA-BANCARIO\\obj\\",
+      "outputPath": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPRINT_1-REVISAO_E_NIVELAMENTO\\AULA_2-POO\\SISTEMA-BANCARIO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,7 +52,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net10.0": {
@@ -74,7 +74,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
