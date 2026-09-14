@@ -167,3 +167,5 @@ C:\Users\45797375800\Desktop\dev-google-3-semestre\SPINT_2-BACKEND\PROJETO_2-BOL
 C:\Users\45797375800\Desktop\dev-google-3-semestre\SPINT_2-BACKEND\PROJETO_2-BOLOS-DO-JACQUIN\BolosDoJacquin.WebApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\45797375800\Desktop\dev-google-3-semestre\SPINT_2-BACKEND\PROJETO_2-BOLOS-DO-JACQUIN\BolosDoJacquin.WebApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\45797375800\Desktop\dev-google-3-semestre\SPINT_2-BACKEND\PROJETO_2-BOLOS-DO-JACQUIN\BolosDoJacquin.WebApi\obj\Debug\net10.0\BolosDoJacquin.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\45797375800\Desktop\dev-google-3-semestre\SPINT_2-BACKEND\PROJETO_2-BOLOS-DO-JACQUIN\BolosDoJacquin.WebApi\bin\Debug\net10.0\BolosDoJacquin.WebApi.xml
+C:\Users\45797375800\Desktop\dev-google-3-semestre\SPINT_2-BACKEND\PROJETO_2-BOLOS-DO-JACQUIN\BolosDoJacquin.WebApi\obj\Debug\net10.0\BolosDoJacquin.WebApi.xml

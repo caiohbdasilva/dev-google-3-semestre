@@ -1,6 +1,10 @@
 ﻿using BolosDoJacquin.WebApi.BdContextEvent;
+using BolosDoJacquin.WebApi.DTO;
 using BolosDoJacquin.WebApi.Interfaces;
 using BolosDoJacquin.WebApi.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BolosDoJacquin.WebApi.Repositories;
 
@@ -12,15 +16,31 @@ public class CategoriaRepository : ICategoria
     {
         _context = context;
     }
-    public Task Atualizar(Guid IdCategoria, Categoria categoria)
+    public async Task Atualizar(Guid IdCategoria, Categoria categoria)
     {
-        throw new NotImplementedException();
+        var categoriaBuscada = await _context.Categoria.FindAsync(IdCategoria);
+        if (categoriaBuscada != null)
+        {
+            categoriaBuscada.NomeCategoria = categoria.NomeCategoria;
+            categoriaBuscada.Ncm = categoria.Ncm;
+            categoriaBuscada.DataAtualizacao = categoria.DataAtualizacao;
+        }
+    }
+    
+
+    public async Task<Categoria?> BuscarPorId(Guid IdCategoria)
+    {
+        return await _context.Categoria.FirstOrDefaultAsync(c =>
+        c.IdCategoria == IdCategoria);
     }
 
-    public Task<Categoria?> BuscarPorId(Guid IdCategoria)
+    public async Task<List<Categoria?>> BuscarPorNCM(string NCM)
     {
-        throw new NotImplementedException();
+
+        return await _context.Categoria.Where(c =>
+        c.Ncm == NCM).AsNoTracking().ToListAsync();
     }
+
 
     public async Task Cadastrar(Categoria categoria)
     {
@@ -33,8 +53,8 @@ public class CategoriaRepository : ICategoria
         throw new NotImplementedException();
     }
 
-    public Task<List<Categoria>> Listar()
+    public async Task<List<Categoria>> Listar()
     {
-        throw new NotImplementedException();
+        return await _context.Categoria.AsNoTracking().ToListAsync();
     }
 }

@@ -9,4 +9,5 @@ public interface ICategoria
     Task Atualizar(Guid IdCategoria, Categoria categoria);
     Task Deletar(Guid IdCategoria);
     Task<Categoria?> BuscarPorId(Guid IdCategoria);
+    Task<List<Categoria?>> BuscarPorNCM(string NCM);
 }

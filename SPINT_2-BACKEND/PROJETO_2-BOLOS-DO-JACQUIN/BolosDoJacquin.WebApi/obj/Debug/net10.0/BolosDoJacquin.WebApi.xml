@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BolosDoJacquin.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:BolosDoJacquin.WebApi.Controllers.CategoriaController.Cadastrar(BolosDoJacquin.WebApi.DTO.CategoriaCadastrarDTO)">
+            <summary>
+            Cadastrar
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BolosDoJacquin.WebApi.Controllers.CategoriaController.Listar">
+            <summary>
+            Listar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BolosDoJacquin.WebApi.Controllers.CategoriaController.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar por Id
+            </summary>
+            <param name="IdCategoria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BolosDoJacquin.WebApi.Controllers.CategoriaController.BuscarPorNCM(System.String)">
+            <summary>
+            Buscar por NCM
+            </summary>
+            <param name="NCM"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>

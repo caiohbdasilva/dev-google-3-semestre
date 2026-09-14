@@ -1,21 +1,41 @@
 CREATE DATABASE bolosdojacquin
 
+GO
+
 USE bolosdojacquin
+
+GO
+
+CREATE TABLE TipoUsuario(
+    IdTipoUsuario UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
+    TipoUsuario VARCHAR(60) NOT NULL,
+    Descricao VARCHAR(100) NOT NULL,
+    DataCadastro DATETIME NOT NULL
+)
+
+GO
 
 CREATE TABLE Usuario(
     IdUsuario UNIQUEIDENTIFIER DEFAULT NEWID () PRIMARY KEY,
-    NomeUsuario NVARCHAR(100) NOT NULL,
+    IdTipoUsuario UNIQUEIDENTIFIER FOREIGN KEY REFERENCES TipoUsuario(IdTipoUsuario),
+    NomeUsuario VARCHAR(100) NOT NULL,
     Email VARCHAR(100) NOT NULL,
     Senha VARCHAR(60) NOT NULL,
-    Perfil VARCHAR (60) NOT NULL,
     Situacao VARCHAR(60) NOT NULL,
     DataCadastro DATETIME NOT NULL
 )
 
+GO
+
 CREATE TABLE Categoria(
     IdCategoria UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
-    NomeCategoria VARCHAR(60) NOT NULL UNIQUE
+    NomeCategoria VARCHAR(60) NOT NULL UNIQUE,
+    NCM VARCHAR(8) NOT NULL,
+    DataCadastro DATETIME NOT NULL,
+    DataAtualizacao DATETIME
 )
+
+GO
 
 CREATE TABLE Produto(
     IdProduto UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
@@ -29,6 +49,8 @@ CREATE TABLE Produto(
     Situacao BIT NOT NULL
 )
 
+GO
+
 CREATE TABLE Avaliacao(
     IdAvaliacao UNIQUEIDENTIFIER DEFAULT NEWID() PRIMARY KEY,
     IdUsuario UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Usuario(IdUsuario),
@@ -41,3 +63,5 @@ CREATE TABLE Avaliacao(
     MotivoOcultacao VARCHAR(250),
     CONSTRAINT UQ_Usuario_Produto UNIQUE (IdUsuario, IdProduto)
 )
+
+DROP DATABASE bolosdojacquin

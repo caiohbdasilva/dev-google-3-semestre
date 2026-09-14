@@ -10,25 +10,82 @@
         "tags": [
           "Categoria"
         ],
+        "summary": "Cadastrar",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Categoria"
+                "$ref": "#/components/schemas/CategoriaDTO"
               }
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Categoria/{IdCategoria}": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "parameters": [
+          {
+            "name": "IdCategoria",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Categoria/{NCM}": {
+      "get": {
+        "tags": [
+          "Categoria"
+        ],
+        "parameters": [
+          {
+            "name": "NCM",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -39,190 +96,22 @@
   },
   "components": {
     "schemas": {
-      "Avaliacao": {
+      "CategoriaDTO": {
+        "required": [
+          "ncm",
+          "nomeCategoria"
+        ],
         "type": "object",
         "properties": {
-          "idAvaliacao": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "idUsuario": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "idProduto": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "nota": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "comentario": {
-            "maxLength": 250,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "dataComentario": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "dataAlteracao": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "situacao": {
-            "type": "boolean"
-          },
-          "motivoOcultacao": {
-            "maxLength": 250,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "idProdutoNavigation": {
-            "$ref": "#/components/schemas/Produto"
-          },
-          "idUsuarioNavigation": {
-            "$ref": "#/components/schemas/Usuario"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Categoria": {
-        "type": "object",
-        "properties": {
-          "idCategoria": {
-            "type": "string",
-            "format": "uuid"
-          },
           "nomeCategoria": {
             "maxLength": 60,
             "minLength": 0,
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
-          "produto": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Produto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Produto": {
-        "type": "object",
-        "properties": {
-          "idProduto": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "idCategoria": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "nomeProduto": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "preco": {
-            "type": "number",
-            "format": "double"
-          },
-          "enderecoImagem": {
-            "maxLength": 250,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "descricaoCurta": {
-            "maxLength": 50,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "descricaoLonga": {
-            "maxLength": 200,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "disponibilidade": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "situacao": {
-            "type": "boolean"
-          },
-          "avaliacao": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Avaliacao"
-            },
-            "nullable": true
-          },
-          "idCategoriaNavigation": {
-            "$ref": "#/components/schemas/Categoria"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Usuario": {
-        "type": "object",
-        "properties": {
-          "idUsuario": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "nomeUsuario": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "senha": {
-            "maxLength": 60,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "perfil": {
-            "maxLength": 60,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "situacao": {
-            "maxLength": 60,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "dataCadastro": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "avaliacao": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Avaliacao"
-            },
-            "nullable": true
+          "ncm": {
+            "minLength": 1,
+            "pattern": "^[0-9]{8}$",
+            "type": "string"
           }
         },
         "additionalProperties": false

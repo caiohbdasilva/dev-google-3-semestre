@@ -8,8 +8,50 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "categoria",
-        "Type": "BolosDoJacquin.WebApi.Models.Categoria",
+        "Name": "dto",
+        "Type": "BolosDoJacquin.WebApi.DTO.CategoriaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquin.WebApi.Controllers.CategoriaController",
+    "Method": "Listar",
+    "RelativePath": "api/Categoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquin.WebApi.Controllers.CategoriaController",
+    "Method": "BuscarPorId",
+    "RelativePath": "api/Categoria/{IdCategoria}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdCategoria",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquin.WebApi.Controllers.CategoriaController",
+    "Method": "BuscarPorNCM",
+    "RelativePath": "api/Categoria/{NCM}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NCM",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
