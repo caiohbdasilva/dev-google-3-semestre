@@ -1,4 +1,5 @@
 using BolosDoJacquin.WebApi.BdContextEvent;
+using BolosDoJacquin.WebApi.BdContextJacquin;
 using BolosDoJacquin.WebApi.Interfaces;
 using BolosDoJacquin.WebApi.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -7,8 +8,7 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<JacquinContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Local")));
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>

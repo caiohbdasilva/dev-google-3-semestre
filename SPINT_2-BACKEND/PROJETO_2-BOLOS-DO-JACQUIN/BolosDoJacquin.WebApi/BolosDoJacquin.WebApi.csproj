@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 	<NoWarn>$(NoWarn);1591</NoWarn>
+	  <NoWarn>$(NoWarn);8619</NoWarn>
+    <UserSecretsId>92ea84cf-de2b-42fd-a672-b9cf96b09985</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

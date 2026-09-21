@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\",
+  "WorkspaceRootPath": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\dto\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\interfaces\\icategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:interfaces\\icategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\dto\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:dto\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\45797375800\\desktop\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\interfaces\\icategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:interfaces\\icategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,59 +40,90 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ICategoria.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ICategoria.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ICategoria.cs",
               "RelativeDocumentMoniker": "Interfaces\\ICategoria.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ICategoria.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ICategoria.cs",
               "RelativeToolTip": "Interfaces\\ICategoria.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-14T15:04:27.254Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T21:04:26.449Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-21T19:48:29.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CategoriaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\DTO\\CategoriaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\DTO\\CategoriaDTO.cs",
               "RelativeDocumentMoniker": "DTO\\CategoriaDTO.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\DTO\\CategoriaDTO.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\DTO\\CategoriaDTO.cs",
               "RelativeToolTip": "DTO\\CategoriaDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T17:26:03.324Z"
+              "WhenOpened": "2026-09-14T17:26:03.324Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CategoriaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Repositories\\CategoriaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Repositories\\CategoriaRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\CategoriaRepository.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Repositories\\CategoriaRepository.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Repositories\\CategoriaRepository.cs",
               "RelativeToolTip": "Repositories\\CategoriaRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAjwBkAAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T13:24:59.198Z"
+              "WhenOpened": "2026-09-14T13:24:59.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CategoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
-              "ToolTip": "C:\\Users\\45797375800\\Desktop\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
               "RelativeToolTip": "Controllers\\CategoriaController.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAcwHcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAgwIwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-14T13:22:20.152Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 8,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

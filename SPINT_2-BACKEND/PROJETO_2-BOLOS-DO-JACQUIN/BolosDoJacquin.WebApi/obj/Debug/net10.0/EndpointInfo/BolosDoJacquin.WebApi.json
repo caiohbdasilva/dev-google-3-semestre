@@ -16,17 +16,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CategoriaDTO"
+                "$ref": "#/components/schemas/CategoriaCadastrarDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CategoriaDTO"
+                "$ref": "#/components/schemas/CategoriaCadastrarDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CategoriaDTO"
+                "$ref": "#/components/schemas/CategoriaCadastrarDTO"
               }
             }
           }
@@ -41,6 +41,7 @@
         "tags": [
           "Categoria"
         ],
+        "summary": "Listar",
         "responses": {
           "200": {
             "description": "OK"
@@ -53,10 +54,78 @@
         "tags": [
           "Categoria"
         ],
+        "summary": "Buscar por Id",
         "parameters": [
           {
             "name": "IdCategoria",
             "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Categoria"
+        ],
+        "summary": "Atualizar",
+        "parameters": [
+          {
+            "name": "IdCategoria",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaAtualizarDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaAtualizarDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaAtualizarDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Categoria"
+        ],
+        "summary": "Deletar",
+        "parameters": [
+          {
+            "name": "IdCategoria",
+            "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "string",
@@ -76,10 +145,12 @@
         "tags": [
           "Categoria"
         ],
+        "summary": "Buscar por NCM",
         "parameters": [
           {
             "name": "NCM",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "string"
@@ -96,7 +167,24 @@
   },
   "components": {
     "schemas": {
-      "CategoriaDTO": {
+      "CategoriaAtualizarDTO": {
+        "type": "object",
+        "properties": {
+          "nomeCategoria": {
+            "maxLength": 60,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "ncm": {
+            "pattern": "^[0-9]{8}$",
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CategoriaCadastrarDTO": {
         "required": [
           "ncm",
           "nomeCategoria"

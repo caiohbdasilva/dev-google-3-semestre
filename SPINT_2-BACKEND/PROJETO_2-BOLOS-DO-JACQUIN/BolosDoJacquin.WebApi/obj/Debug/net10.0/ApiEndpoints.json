@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "BolosDoJacquin.WebApi.DTO.CategoriaDTO",
+        "Type": "BolosDoJacquin.WebApi.DTO.CategoriaCadastrarDTO",
         "IsRequired": true
       }
     ],
@@ -30,6 +30,43 @@
     "Method": "BuscarPorId",
     "RelativePath": "api/Categoria/{IdCategoria}",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdCategoria",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquin.WebApi.Controllers.CategoriaController",
+    "Method": "Atualizar",
+    "RelativePath": "api/Categoria/{IdCategoria}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdCategoria",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BolosDoJacquin.WebApi.DTO.CategoriaAtualizarDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BolosDoJacquin.WebApi.Controllers.CategoriaController",
+    "Method": "Deletar",
+    "RelativePath": "api/Categoria/{IdCategoria}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

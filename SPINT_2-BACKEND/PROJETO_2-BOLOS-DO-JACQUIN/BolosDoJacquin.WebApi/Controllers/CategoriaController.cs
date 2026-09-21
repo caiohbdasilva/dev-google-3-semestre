@@ -109,16 +109,51 @@ public class CategoriaController : ControllerBase
         }
     }
 
+
+    /// <summary>
+    /// Atualizar
+    /// </summary>
+    /// <param name="IdCategoria"></param>
+    /// <param name="dto"></param>
+    /// <returns></returns>
     [HttpPatch("{IdCategoria:guid}")]
     public async Task<IActionResult> Atualizar(Guid IdCategoria, [FromBody] CategoriaAtualizarDTO dto)
     {
-        var categoriaExistente = await _categoria.BuscarPorId(IdCategoria);
+        try
+        {
+            var categoriaExistente = await _categoria.BuscarPorId(IdCategoria);
 
-        categoriaExistente.NomeCategoria = dto.NomeCategoria != null ? dto.NomeCategoria : categoriaExistente.NomeCategoria;
-        categoriaExistente.Ncm = dto.NCM != null ? dto.NCM : categoriaExistente.Ncm;
-        categoriaExistente.DataAtualizacao = dto.NomeCategoria != null || dto.NCM != null ? DateTime.Now : categoriaExistente.DataAtualizacao;
+            categoriaExistente.NomeCategoria = dto.NomeCategoria != null ? dto.NomeCategoria : categoriaExistente.NomeCategoria;
+            categoriaExistente.Ncm = dto.NCM != null ? dto.NCM : categoriaExistente.Ncm;
+            categoriaExistente.DataAtualizacao = dto.NomeCategoria != null || dto.NCM != null ? DateTime.Now : categoriaExistente.DataAtualizacao;
 
-        await _categoria.Atualizar(IdCategoria, categoriaExistente);
-        return Ok(categoriaExistente);
+            await _categoria.Atualizar(IdCategoria, categoriaExistente);
+            return Ok(categoriaExistente);
+        }
+        catch (Exception e)
+        {
+
+            return BadRequest(e.Message);
+        }
     }
+
+    /// <summary>
+    /// Deletar
+    /// </summary>
+    /// <param name="IdCategoria"></param>
+    /// <returns></returns>
+    [HttpDelete("{IdCategoria:guid}")]
+    public async Task<IActionResult> Deletar (Guid IdCategoria)
+    {
+        try
+        {
+            await _categoria.Deletar(IdCategoria);
+            return NoContent();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
 }

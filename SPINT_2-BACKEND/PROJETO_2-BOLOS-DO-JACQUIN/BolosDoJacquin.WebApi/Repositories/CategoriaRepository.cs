@@ -36,7 +36,6 @@ public class CategoriaRepository : ICategoria
 
     public async Task<List<Categoria?>> BuscarPorNCM(string NCM)
     {
-
         return await _context.Categoria.Where(c =>
         c.Ncm == NCM).AsNoTracking().ToListAsync();
     }
@@ -48,9 +47,14 @@ public class CategoriaRepository : ICategoria
         await _context.SaveChangesAsync();
     }
 
-    public Task Deletar(Guid IdCategoria)
+    public async Task Deletar(Guid IdCategoria)
     {
-        throw new NotImplementedException();
+        var categoriaBuscada = await _context.Categoria.FindAsync(IdCategoria);
+        if (categoriaBuscada != null)
+        {
+            _context.Categoria.Remove(categoriaBuscada);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public async Task<List<Categoria>> Listar()
