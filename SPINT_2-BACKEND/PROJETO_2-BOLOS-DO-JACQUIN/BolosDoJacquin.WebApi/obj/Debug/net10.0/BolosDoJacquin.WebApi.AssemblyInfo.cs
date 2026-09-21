@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BolosDoJacquin.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+759734ef48df849d53f857cc9746b60d8e36590a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0f9e5f8c775a3a7561d63776a335ffd4a61499c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BolosDoJacquin.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BolosDoJacquin.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

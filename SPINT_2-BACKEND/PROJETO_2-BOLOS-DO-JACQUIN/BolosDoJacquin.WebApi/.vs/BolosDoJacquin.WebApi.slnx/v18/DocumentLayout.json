@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\interfaces\\itipousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:interfaces\\itipousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\interfaces\\icategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,8 +19,16 @@
       "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:dto\\categoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|c:\\users\\caios\\source\\repos\\dev-google-3-semestre\\spint_2-backend\\projeto_2-bolos-do-jacquin\\bolosdojacquin.webapi\\repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C020E1C1-49E1-FB36-CAD0-DDEC53EECFA8}|BolosDoJacquin.WebApi.csproj|solutionrelative:repositories\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,65 +37,56 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 11,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 18,
+          "SelectedChildIndex": -1,
+          "Children": []
+        },
+        {
+          "DockedWidth": 15,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ICategoria.cs",
               "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ICategoria.cs",
               "RelativeDocumentMoniker": "Interfaces\\ICategoria.cs",
               "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ICategoria.cs",
               "RelativeToolTip": "Interfaces\\ICategoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T15:04:27.254Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-09-21T21:27:12.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-21T21:04:26.449Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-21T19:48:29.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CategoriaDTO.cs",
               "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\DTO\\CategoriaDTO.cs",
               "RelativeDocumentMoniker": "DTO\\CategoriaDTO.cs",
               "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\DTO\\CategoriaDTO.cs",
               "RelativeToolTip": "DTO\\CategoriaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-14T17:26:03.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "Controllers\\CategoriaController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAgwIwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T13:22:20.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CategoriaRepository.cs",
               "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Repositories\\CategoriaRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\CategoriaRepository.cs",
@@ -101,18 +96,24 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-14T13:24:59.198Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 15,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CategoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
-              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Controllers\\CategoriaController.cs",
-              "RelativeToolTip": "Controllers\\CategoriaController.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAgwIwAAAAPAAAAAAAAAA==",
+              "Title": "ITipoUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ITipoUsuario.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ITipoUsuario.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Interfaces\\ITipoUsuario.cs",
+              "RelativeToolTip": "Interfaces\\ITipoUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T13:22:20.152Z",
+              "WhenOpened": "2026-09-21T21:28:51.646Z",
               "EditorCaption": ""
             }
           ]
@@ -124,6 +125,53 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "370b00fc-8657-4e19-84b5-404d685b419f",
+        "Display": 0,
+        "X": 396,
+        "Y": 271,
+        "Width": 826,
+        "Height": 696,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-21T19:48:29.868Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\caios\\source\\repos\\dev-google-3-semestre\\SPINT_2-BACKEND\\PROJETO_2-BOLOS-DO-JACQUIN\\BolosDoJacquin.WebApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T21:04:26.449Z",
+              "EditorCaption": ""
             }
           ]
         }
