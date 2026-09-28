@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de DOM</title>
+    <style>
+        .destaque{
+            background-color: yellow;
+            color: black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Aula de DOM</h1>
+    <p id="descricao">Aprendendo a manipular elementos com JavaScript</p>
+
+    <p class="mensagem">Primeira mensagem</p>
+    
+    <p class="mensagem">Segunda mensagem</p>
+
+    <button id="botao" onclick="mostrarMensagem()">Alterar Pagina</button>
+    <button onclick="alternarDestaque()">Destacar titulo</button>
+
+    <input id="nome" type="text" placeholder="Digite seu nome">
+
+    <p id="resultado"></p>
+
+    <button onclick="mostrarNome()">Mostrar nome</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
