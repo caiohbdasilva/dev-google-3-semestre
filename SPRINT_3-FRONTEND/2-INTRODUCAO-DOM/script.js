@@ -50,5 +50,17 @@ function mostrarNome(){
     } else {
         resultado.textContent = `Olá, ${inputNome.value}!`
     }
-
 }
+
+function trocarImagem() {
+    const imagem = document.querySelector("#imagem");
+    
+    imagem.src = "https://upload.wikimedia.org/wikipedia/pt/4/43/FCBarcelona.svg";
+    imagem.alt = "Escudo do Barça";
+    imagem.style.width = "200px";
+}
+
+const link = document.querySelector("#link")
+
+link.href = "https: //developer.mozilla.org";
+link.textContent = "Abrir documentação"
