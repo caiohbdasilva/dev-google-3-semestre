@@ -1,24 +1,21 @@
 const operacoes = ["+", "-", "x", "÷", "Limpar"];
 const operacoesBotao = document.querySelector("#botoes-container");
 
-
 let operacaoEscolhida = ""; 
 
 for (let cont = 0; cont < operacoes.length; cont++) {
     const operacao = document.createElement("button");
     operacao.textContent = operacoes[cont];
 
-  
     operacao.onclick = function() {
         operacaoEscolhida = operacoes[cont];
         
-       
+
         calcularResultado(); 
     };
 
     operacoesBotao.appendChild(operacao);
 }
-
 
 function calcularResultado() {
     const input1 = document.querySelector("#primeiroNumero");
@@ -41,6 +38,6 @@ function calcularResultado() {
         input1.value = "";
         input2.value = "";
         visorResultado.textContent = "";
-        operacaoEscolhida = ""; 
+        operacaoEscolhida = "";
     }
 }
