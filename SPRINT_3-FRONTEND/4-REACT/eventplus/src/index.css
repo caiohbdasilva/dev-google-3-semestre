@@ -6,16 +6,16 @@
 }
 
 body{
-  min-width: 300px;
+  min-width: 320px;
 
   min-height: 100vh;
 
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   color: #151515;
   background: #ffffff;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
 }
