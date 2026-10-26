@@ -1,0 +1,134 @@
+.catalogo-eventos-page {
+    background-color: #ffffff;
+    min-height: calc(100vh - 125px);
+}
+
+.container-eventos {
+    width: min(1201px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 50px 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eventos-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.eventos-titulo h1 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+.eventos-titulo hr {
+    width: 265px;
+    height: 2px;
+    margin: 0;
+    border: none;
+    background-color: #b51d44;
+    opacity: 1;
+}
+
+.eventos-filtro-categorias {
+    width: 100%;
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+}
+
+.eventos-filtro-item {
+    min-height: 26px;
+    padding: 1px 16px;
+    border: none;
+    border-radius: 13px;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #000000;
+    white-space: nowrap;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.eventos-filtro-item:hover {
+    color: #b51d44;
+}
+
+.eventos-filtro-item.ativo {
+    min-width: 105px;
+    background-color: #b51d44;
+    color: #ffffff;
+}
+
+.eventos-status {
+    margin-top: 36px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: #6e6668;
+    text-align: center;
+}
+
+.eventos {
+    width: 100%;
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, 296px);
+    justify-content: space-between;
+    row-gap: 50px;
+    column-gap: 32px;
+}
+
+@media (max-width: 1040px) {
+    .eventos {
+        grid-template-columns: repeat(2, 296px);
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 680px) {
+    .container-eventos {
+        width: calc(100% - 32px);
+        padding: 36px 0 56px;
+    }
+
+    .eventos-titulo h1 {
+        font-size: 1.375rem;
+        line-height: 33px;
+    }
+
+    .eventos-titulo hr {
+        width: 180px;
+    }
+
+    .eventos-filtro-categorias {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-x;
+        gap: 10px;
+        padding-bottom: 6px;
+        scrollbar-width: thin;
+    }
+
+    .eventos {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 32px;
+    }
+}

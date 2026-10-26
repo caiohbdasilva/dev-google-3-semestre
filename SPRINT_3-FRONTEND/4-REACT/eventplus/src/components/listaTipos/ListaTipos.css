@@ -1,0 +1,214 @@
+.lista-tipos {
+    width: 100%;
+    min-height: 432px;
+    background-color: #b51d44;
+    padding: 52px 0 64px;
+    color: #ffffff;
+}
+
+.lista-tipos-conteudo {
+    width: min(1202px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.lista-tipos-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.lista-tipos-titulo h2,
+.lista-tipos-conteudo > h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+.lista-tipos-titulo hr {
+    width: 150px;
+    height: 2px;
+    margin: 0;
+    border: none;
+    background-color: #ffffff;
+    opacity: 1;
+}
+
+.lista-tipos-tabela-wrapper {
+    width: 100%;
+    margin-top: 55px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.75) rgba(255, 255, 255, 0.2);
+}
+
+.lista-tipos-tabela-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.lista-tipos-tabela-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+}
+
+.lista-tipos-tabela-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 999px;
+}
+
+.lista-tipos-tabela,
+.lista-usuarios-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    color: #ffffff;
+}
+
+.lista-tipos-tabela thead tr,
+.lista-usuarios-tabela thead tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+.lista-tipos-tabela thead th,
+.lista-usuarios-tabela thead th {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 0 16px 9px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.lista-tipos-tabela thead th:first-child {
+    padding-left: 169px;
+}
+
+.lista-tipos-tabela tbody tr,
+.lista-usuarios-tabela tbody tr {
+    border-bottom: 1px solid #ffffff;
+    transition: background-color 160ms ease;
+}
+
+.lista-tipos-tabela tbody tr:hover,
+.lista-usuarios-tabela tbody tr:hover,
+.lista-tipos-linha-ativa {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lista-tipos-tabela tbody td,
+.lista-usuarios-tabela tbody td {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #ffffff;
+    padding: 26px 16px;
+}
+
+.lista-tipos-tabela tbody td:first-child {
+    padding-left: 146px;
+}
+
+.lista-tipos-coluna-acao {
+    width: 120px;
+    text-align: center !important;
+}
+
+.lista-tipos-tabela thead th:last-child,
+.lista-tipos-tabela tbody td:last-child {
+    padding-right: 48px;
+}
+
+.lista-tipos-acao {
+    border: none;
+    background: transparent;
+    padding: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.lista-tipos-acao:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.lista-tipos-acao img {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+}
+
+.lista-tipos-tabela-vazia {
+    text-align: center !important;
+    padding: 32px 16px !important;
+}
+
+@media (max-width: 900px) {
+    .lista-tipos-tabela thead th:first-child,
+    .lista-tipos-tabela tbody td:first-child {
+        padding-left: 16px;
+    }
+
+    .lista-tipos-tabela thead th:last-child,
+    .lista-tipos-tabela tbody td:last-child {
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .lista-tipos {
+        min-height: auto;
+        padding: 32px 0 48px;
+    }
+
+    .lista-tipos-conteudo {
+        width: calc(100% - 32px);
+    }
+
+    .lista-tipos-tabela-wrapper {
+        margin-top: 36px;
+    }
+
+    .lista-tipos-tabela {
+        min-width: 340px;
+    }
+
+    .lista-tipos-tabela thead th {
+        padding: 0 12px 8px;
+    }
+
+    .lista-tipos-tabela thead th:first-child {
+        padding-left: 12px;
+    }
+
+    .lista-tipos-tabela tbody td {
+        padding: 20px 12px;
+        white-space: nowrap;
+    }
+
+    .lista-tipos-tabela tbody td:first-child {
+        padding-left: 12px;
+    }
+
+    .lista-tipos-coluna-acao {
+        width: 72px;
+    }
+
+    .lista-tipos-tabela thead th:last-child,
+    .lista-tipos-tabela tbody td:last-child {
+        padding-right: 12px;
+    }
+}

@@ -3,55 +3,117 @@
     --branco: #ffffff;
     --cor-texto: #17143f;
     --vermelho: #b51d44;
-    --vermelho-escuro: #821B47;
+    --vermelho-escuro: #821b47;
     --azul-claro: rgba(0, 80, 251, 0.21);
 }
 
 .home-evento-card {
-    border: 1px solid var(--vermelho-escuro);
-    border-radius: 12px;
+    width: 296px;
+    max-width: 100%;
+    min-height: 403px;
+    border: 2px solid var(--vermelho-escuro);
+    border-radius: 5px;
+    background-color: var(--branco);
     overflow: hidden;
-    max-width: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    box-sizing: border-box;
+    transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.home-evento-card img{
+.home-evento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(130, 27, 71, 0.14);
+}
+
+.home-evento-card img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 164px;
     object-fit: cover;
+    border-radius: 3px 3px 0 0;
+    flex-shrink: 0;
 }
 
-.home-evento-card span{
+.home-evento-card span,
+.home-evento-card-categoria {
+    align-self: flex-start;
+    margin: 14px 10px 0 8px;
+    min-width: 84px;
+    height: 22px;
+    padding: 2px 12px;
+    border-radius: 13px;
     background-color: var(--azul-claro);
-    border-radius: 12px;
-    padding: 0 10px;
-    display:inline-block;
-    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 0.6875rem;
+    line-height: 17px;
+    color: #000000;
     text-align: center;
 }
 
-.home-evento-card-info{
+.home-evento-card-info {
+    padding: 17px 20px 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    height: 70%;
+    flex: 1;
 }
 
-.home-evento-card-info button{
+.home-evento-card-info h3 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 27px;
+    color: #000000;
+    text-align: center;
+}
+
+.home-evento-card-info p {
+    width: 192px;
+    max-width: 100%;
+    min-height: 72px;
+    margin: 17px auto 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #000000;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.home-evento-card-info a,
+.home-evento-card-info button {
+    margin: 17px 0 0;
     border: none;
     background: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 27px;
     color: var(--vermelho);
-    font-weight: 700;
+    text-decoration: none;
     cursor: pointer;
+    transition: color 150ms ease;
 }
 
-.home-evento-card h3,
-.home-evento-card p,
-.home-evento-card span,
-.home-evento-card button{
-    margin: 12px 16px;
+.home-evento-card-info a:hover,
+.home-evento-card-info button:hover {
+    color: var(--vermelho-escuro);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .home-evento-card {
+        width: 315px;
+    }
 }

@@ -1,0 +1,166 @@
+.cadastro-tipo-usuario-page {
+    background-color: #ffffff;
+}
+
+.cadastro-tipo-usuario-formulario-section {
+    width: min(1202px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 56px 0 125px;
+}
+
+.cadastro-tipo-usuario-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.cadastro-tipo-usuario-titulo h1 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+.cadastro-tipo-usuario-titulo hr {
+    width: 180px;
+    height: 2px;
+    margin: 0;
+    border: none;
+    background-color: #b51d44;
+    opacity: 1;
+}
+
+.cadastro-tipo-usuario-conteudo {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+}
+
+.cadastro-tipo-usuario-ilustracao {
+    width: 100%;
+    max-width: 519px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.cadastro-tipo-usuario-formulario {
+    width: 375px;
+    max-width: 100%;
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cadastro-tipo-usuario-campo-wrapper {
+    width: 356px;
+    max-width: 100%;
+}
+
+.cadastro-tipo-usuario-campo-wrapper .campo {
+    min-height: 26px;
+    padding: 0 9px 2px;
+    border-bottom: 1px solid #000000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #000000;
+}
+
+.cadastro-tipo-usuario-campo-wrapper .campo::placeholder {
+    color: #b4a9a9;
+}
+
+.cadastro-tipo-usuario-botao {
+    width: 375px;
+    max-width: 100%;
+    height: 45px;
+    min-height: 45px;
+    margin-top: 25px;
+    border-radius: 5px;
+    background-color: #b51d44;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 27px;
+    color: #ffffff;
+}
+
+.cadastro-tipo-usuario-cancelar {
+    margin-top: 12px;
+    border: none;
+    background: transparent;
+    color: #6e6668;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cadastro-tipo-usuario-mensagem {
+    margin: 14px 0 0;
+    color: #b51d44;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .cadastro-tipo-usuario-formulario-section {
+        padding-bottom: 68px;
+    }
+
+    .cadastro-tipo-usuario-conteudo {
+        flex-direction: column;
+        gap: 36px;
+    }
+
+    .cadastro-tipo-usuario-ilustracao {
+        max-width: 380px;
+    }
+
+    .cadastro-tipo-usuario-formulario {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .cadastro-tipo-usuario-formulario-section {
+        width: calc(100% - 80px);
+        padding: 38px 0 31px;
+    }
+
+    .cadastro-tipo-usuario-titulo {
+        gap: 13px;
+    }
+
+    .cadastro-tipo-usuario-conteudo {
+        margin-top: 19px;
+        gap: 19px;
+    }
+
+    .cadastro-tipo-usuario-ilustracao {
+        max-width: 214px;
+    }
+
+    .cadastro-tipo-usuario-formulario,
+    .cadastro-tipo-usuario-campo-wrapper,
+    .cadastro-tipo-usuario-botao {
+        width: 310px;
+        max-width: 100%;
+    }
+
+    .cadastro-tipo-usuario-campo-wrapper .campo {
+        padding: 0 0 2px;
+    }
+
+    .cadastro-tipo-usuario-botao {
+        margin-top: 27px;
+    }
+}

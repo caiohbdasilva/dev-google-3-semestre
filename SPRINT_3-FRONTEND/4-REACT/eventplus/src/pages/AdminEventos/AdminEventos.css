@@ -1,0 +1,263 @@
+.admin-evento-page {
+    background-color: #ffffff;
+}
+
+.admin-evento-formulario-section,
+.admin-evento-lista-section {
+    width: min(1202px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.admin-evento-formulario-section {
+    padding: 60px 0 48px;
+}
+
+.admin-evento-lista-section {
+    padding: 24px 0 64px;
+}
+
+.admin-evento-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-evento-titulo h1,
+.admin-evento-titulo h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+}
+
+.admin-evento-titulo hr {
+    width: 180px;
+    height: 2px;
+    margin: 0;
+    border: none;
+    background-color: #b51d44;
+    opacity: 1;
+}
+
+.admin-evento-subtitulo hr {
+    width: 150px;
+}
+
+.admin-evento-conteudo {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.admin-evento-ilustracao {
+    width: 100%;
+    max-width: 568px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.admin-evento-formulario {
+    width: 592px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.admin-evento-linha-topo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.admin-evento-campo-nome {
+    width: 356px;
+    max-width: 100%;
+}
+
+.admin-evento-campo-data {
+    width: 201px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 4px;
+}
+
+.admin-evento-campo-data img {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.admin-evento-campo-data input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    color: #151515;
+}
+
+.admin-evento-campo-largo {
+    width: 100%;
+}
+
+.admin-evento-formulario .campo {
+    min-height: 28px;
+    padding: 0 8px 4px;
+    border-bottom: 1px solid #000000;
+}
+
+.admin-evento-formulario .campo::placeholder {
+    color: #b4a9a9;
+}
+
+.admin-evento-linha-selects {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 19px;
+}
+
+.admin-evento-select-wrapper {
+    width: 285px;
+    max-width: 100%;
+    position: relative;
+}
+
+.admin-evento-select-wrapper select {
+    width: 100%;
+    min-height: 35px;
+    padding: 4px 36px 4px 8px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    background-image: url("../../assets/icons/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    background-size: 24px 24px;
+    appearance: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: #151515;
+    cursor: pointer;
+}
+
+.admin-evento-campo-foto {
+    width: 100%;
+}
+
+.admin-evento-campo-foto label {
+    width: 100%;
+    min-height: 35px;
+    padding: 4px 8px 6px;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #b4a9a9;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.admin-evento-campo-foto label img {
+    width: 24px;
+    height: 24px;
+}
+
+.admin-evento-campo-foto input[type="file"] {
+    display: none;
+}
+
+.admin-evento-botao {
+    width: 100%;
+    height: 45px;
+    min-height: 45px;
+    border-radius: 5px;
+    background-color: #b51d44;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #ffffff;
+}
+
+.admin-evento-mensagem {
+    margin: 0;
+    text-align: center;
+    color: #b51d44;
+    font-size: 0.9rem;
+}
+
+.admin-evento-status {
+    margin-top: 32px;
+    text-align: center;
+    color: #6e6668;
+}
+
+.admin-evento-cards {
+    width: 100%;
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 296px);
+    justify-content: space-between;
+    row-gap: 50px;
+    column-gap: 32px;
+}
+
+@media (max-width: 1040px) {
+    .admin-evento-conteudo {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .admin-evento-ilustracao {
+        max-width: 380px;
+    }
+
+    .admin-evento-cards {
+        grid-template-columns: repeat(2, 296px);
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 680px) {
+    .admin-evento-formulario-section,
+    .admin-evento-lista-section {
+        width: calc(100% - 78px);
+    }
+
+    .admin-evento-ilustracao {
+        max-width: 230px;
+    }
+
+    .admin-evento-linha-topo,
+    .admin-evento-linha-selects {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .admin-evento-campo-nome,
+    .admin-evento-campo-data,
+    .admin-evento-select-wrapper {
+        width: 100%;
+    }
+
+    .admin-evento-cards {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 32px;
+    }
+}
