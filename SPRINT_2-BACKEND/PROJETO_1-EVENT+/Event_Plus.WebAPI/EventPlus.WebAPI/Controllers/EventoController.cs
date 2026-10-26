@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.DTO;
+using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
@@ -148,6 +148,7 @@ public class EventoController : ControllerBase
     }
 
     [HttpGet("proximo")]
+    [HttpGet("proximos")]
     public async Task <IActionResult> ListarProximoEvento()
     {
         try

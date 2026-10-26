@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.Interfaces;
+using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Utils;
 using Microsoft.Extensions.Options;
 using System.Text.Json;
@@ -24,6 +24,11 @@ public class SightengineModerationService : IModerationService
 
         public async Task<bool> ModerarTexto(string texto)
         {
+            if (string.IsNullOrWhiteSpace(_apiuser) || string.IsNullOrWhiteSpace(_apisecret))
+            {
+                return false;
+            }
+
             var form = new FormUrlEncodedContent(new Dictionary<string, string>
             {
                 ["text"] = texto,

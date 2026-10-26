@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.BdContextEvent;
+using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Controllers;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
@@ -40,7 +40,7 @@ public class EventoRepository : IEvento
 
     public async Task<Evento?> BuscarPorId(Guid IdEvento)
     {
-        return await _context.Evento.FirstOrDefaultAsync(e =>
+        return await _context.Evento.Include(e => e.IdTipoEventoNavigation).Include(e => e.IdInstituicaoNavigation).FirstOrDefaultAsync(e =>
         e.IdEvento == IdEvento);
     }
 
@@ -56,7 +56,7 @@ public class EventoRepository : IEvento
 
     public async Task<List<Evento>> Listar()
     {
-        return await _context.Evento.AsNoTracking().ToListAsync();
+        return await _context.Evento.Include(e => e.IdTipoEventoNavigation).Include(e => e.IdInstituicaoNavigation).AsNoTracking().ToListAsync();
     }
 
     public async Task<List<Evento>> ListarPorInscrito(Guid id)
@@ -78,7 +78,7 @@ public class EventoRepository : IEvento
 
     public async Task<List<Evento>> ListarProximoEvento()
     {
-        return await _context.Evento.Where( e=>
+        return await _context.Evento.Include(e => e.IdTipoEventoNavigation).Include(e => e.IdInstituicaoNavigation).Where( e=>
         e.DataEvento >= DateTime.Today).
         OrderBy(e => e.DataEvento).
         AsNoTracking().

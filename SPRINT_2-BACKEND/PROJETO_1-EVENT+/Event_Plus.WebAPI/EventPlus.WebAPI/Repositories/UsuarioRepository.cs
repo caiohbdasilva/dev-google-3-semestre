@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.BdContextEvent;
+using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using EventPlus.WebAPI.Utils;
@@ -61,7 +61,7 @@ public class UsuarioRepository : IUsuario
 
     public async Task<Usuario?> BuscarPorId(Guid IdUsuario)
     {
-        return await _context.Usuario.FirstOrDefaultAsync(u =>
+        return await _context.Usuario.Include(u => u.IdTipoUsuarioNavigation).FirstOrDefaultAsync(u =>
         u.IdUsuario == IdUsuario);
     }
 

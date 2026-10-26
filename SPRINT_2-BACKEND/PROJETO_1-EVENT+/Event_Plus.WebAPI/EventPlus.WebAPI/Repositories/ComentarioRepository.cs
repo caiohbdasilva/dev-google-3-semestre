@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.BdContextEvent;
+using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.EntityFrameworkCore;
@@ -16,8 +16,9 @@ namespace EventPlus.WebAPI.Repositories;
 
         public async Task<Comentario?> BuscarPorId(Guid IdComentario)
         {
-            return await _context.Comentario.FirstOrDefaultAsync(c => 
-                c.IdComentario == IdComentario);
+            return await _context.Comentario
+                .Include(c => c.IdUsuarioNavigation)
+                .FirstOrDefaultAsync(c => c.IdComentario == IdComentario);
         }
 
         public async Task Cadastrar(Comentario comentario)
@@ -43,16 +44,19 @@ namespace EventPlus.WebAPI.Repositories;
 
         public async Task<List<Comentario>> Listar()
         {
-            return await _context.Comentario.AsNoTracking().ToListAsync();
+            return await _context.Comentario
+                .Include(c => c.IdUsuarioNavigation)
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task<List<Comentario>> ListarPorEvento(Guid id)
-    {
-        return await _context.Comentario.Include(c => 
-            c.IdEventoNavigation).
-            Where(c => c.IdEvento == id).
-            AsNoTracking().
-            ToListAsync();
-    }
+        {
+            return await _context.Comentario
+                .Include(c => c.IdUsuarioNavigation)
+                .Include(c => c.IdEventoNavigation)
+                .Where(c => c.IdEvento == id && c.Exibe)
+                .AsNoTracking()
+                .ToListAsync();
+        }
 }
-

@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.DTO;
+using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
@@ -51,7 +51,12 @@ public class ComentarioController : ControllerBase
             };
 
             await _comentario.Cadastrar(comentario);
-            return StatusCode(201, comentario);
+            if (reprovado)
+            {
+                return Ok(new { mensagem = "Comentário ocultado pela moderação de conteúdo." });
+            }
+            var comentarioCriado = await _comentario.BuscarPorId(comentario.IdComentario) ?? comentario;
+            return StatusCode(201, comentarioCriado);
         }
 
         catch (Exception e)
@@ -76,6 +81,7 @@ public class ComentarioController : ControllerBase
     }
 
     [HttpGet("ListarPorEvento/{id:guid}")]
+    [HttpGet("evento/{id:guid}")]
     public async Task<IActionResult> ListarPorEvento(Guid id)
     {
         try

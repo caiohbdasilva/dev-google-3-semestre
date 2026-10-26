@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Models;
@@ -18,9 +19,11 @@ public partial class Evento
 
     [StringLength(100)]
     [Unicode(false)]
+    [JsonPropertyName("nome")]
     public string NomeEvento { get; set; } = null!;
 
     [Column(TypeName = "text")]
+    [JsonPropertyName("descricao")]
     public string DescricaoEvento { get; set; } = null!;
 
     [Column(TypeName = "datetime")]
@@ -29,6 +32,7 @@ public partial class Evento
     [Column("URLImagem")]
     [StringLength(200)]
     [Unicode(false)]
+    [JsonPropertyName("imagemUrl")]
     public string? Urlimagem { get; set; }
 
     [InverseProperty("IdEventoNavigation")]

@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Models;
@@ -14,6 +15,7 @@ public partial class TipoUsuario
 
     [StringLength(100)]
     [Unicode(false)]
+    [JsonPropertyName("titulo")]
     public string TituloUsuario { get; set; } = null!;
 
     [InverseProperty("IdTipoUsuarioNavigation")]

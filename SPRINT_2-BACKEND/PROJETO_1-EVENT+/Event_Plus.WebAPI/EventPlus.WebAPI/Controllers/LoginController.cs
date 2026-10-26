@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.DTO;
+using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -87,7 +87,9 @@ public class LoginController : ControllerBase
             {
                 usuarioEncontrado.IdUsuario,
                 usuarioEncontrado.Nome,
-                usuarioEncontrado.Email
+                usuarioEncontrado.Email,
+                usuarioEncontrado.IdTipoUsuario,
+                usuarioEncontrado.IdTipoUsuarioNavigation
             }
         });
     }

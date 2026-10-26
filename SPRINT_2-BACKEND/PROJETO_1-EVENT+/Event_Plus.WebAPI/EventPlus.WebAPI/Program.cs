@@ -88,7 +88,7 @@ builder.Services.AddAuthentication(options =>
         ClockSkew = TimeSpan.FromMinutes(5), //Valida a tolerância de tempo para expiração do token (ClockSkew) 
         // Ele permite uma margem de erro de 5 minutos para compensar possíveis diferenças de horário entre o servidor e o cliente.
         IssuerSigningKey = new SymmetricSecurityKey(//Valida a assinatura do token com a chave secreta definida na API
-            System.Text.Encoding.UTF8.GetBytes("Jwt:Key")
+            System.Text.Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
         )
     };
 });
@@ -108,7 +108,15 @@ builder.Services.AddAuthorization(); //Adiciona o serviço de autorização para
                                      //Ele é necessário para a data annotation [Authorize] funcionar nos Controllers, 
                                      //permitindo que apenas usuários autenticados acessem determinados recursos da API.
 
-builder.Services.AddControllers();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -118,7 +126,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection(); // Redirecionamento de um HTTP para HTTPS, garantindo que todas as requisições sejam feitas de forma segura.
+// app.UseHttpsRedirection(); // Desabilitado em desenvolvimento para permitir conexões HTTP diretas (porta 5229) sem bloqueio de preflight CORS.
+
+app.UseCors("CorsPolicy");
 
 app.UseAuthentication(); // Ativa a autenticação JWT para validar os tokens enviados pelos clientes nas requisições.
 

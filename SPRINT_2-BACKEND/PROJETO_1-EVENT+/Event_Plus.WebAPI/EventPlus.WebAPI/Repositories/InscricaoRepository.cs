@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.BdContextEvent;
+using EventPlus.WebAPI.BdContextEvent;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.EntityFrameworkCore;
@@ -32,9 +32,14 @@ public class InscricaoRepository : IInscricao
             p.IdPresenca == IdPresenca);
     }
 
-    public Task Deletar(Guid IdPresenca)
+    public async Task Deletar(Guid IdPresenca)
     {
-        throw new NotImplementedException();
+        var presencaBuscada = await _context.Presenca.FindAsync(IdPresenca);
+        if (presencaBuscada != null)
+        {
+            _context.Presenca.Remove(presencaBuscada);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public async Task Inscrever(Presenca presenca)
@@ -48,8 +53,12 @@ public class InscricaoRepository : IInscricao
         return await _context.Presenca.AsNoTracking().ToListAsync();    
     }
 
-    public Task<List<Presenca>> ListarMinhasPresencas(Guid IdUsuario)
+    public async Task<List<Presenca>> ListarMinhasPresencas(Guid IdUsuario)
     {
-        throw new NotImplementedException();
+        return await _context.Presenca
+            .Include(p => p.IdEventoNavigation)
+            .Where(p => p.IdUsuario == IdUsuario)
+            .AsNoTracking()
+            .ToListAsync();
     }
 }

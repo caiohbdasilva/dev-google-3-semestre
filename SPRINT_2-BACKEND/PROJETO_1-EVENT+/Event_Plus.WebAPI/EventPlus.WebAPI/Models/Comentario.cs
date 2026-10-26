@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 
 namespace EventPlus.WebAPI.Models;
@@ -18,6 +19,7 @@ public partial class Comentario
 
     [StringLength(250)]
     [Unicode(false)]
+    [JsonPropertyName("descricao")]
     public string DescricaoComentario { get; set; } = null!;
 
     [Column(TypeName = "datetime")]

@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.DTO;
+using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EventPlus.WebAPI.Controllers;
 
 [Route("api/[controller]")]
+[Route("api/Presenca")]
 [ApiController]
 public class InscricaoController : ControllerBase
 {
@@ -49,6 +50,20 @@ public class InscricaoController : ControllerBase
         catch (Exception e)
         {
 
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("usuario/{idUsuario:guid}")]
+    public async Task<IActionResult> ListarPorUsuario(Guid idUsuario)
+    {
+        try
+        {
+            var presencas = await _inscricao.ListarMinhasPresencas(idUsuario);
+            return Ok(presencas);
+        }
+        catch (Exception e)
+        {
             return BadRequest(e.Message);
         }
     }
@@ -99,6 +114,20 @@ public class InscricaoController : ControllerBase
             return BadRequest(e.Message);
         }
 
+    }
+
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> Deletar(Guid id)
+    {
+        try
+        {
+            await _inscricao.Deletar(id);
+            return NoContent();
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
 }

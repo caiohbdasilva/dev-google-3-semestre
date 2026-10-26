@@ -1,4 +1,4 @@
-﻿using EventPlus.WebAPI.DTO;
+using EventPlus.WebAPI.DTO;
 using EventPlus.WebAPI.Interfaces;
 using EventPlus.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
@@ -56,6 +56,7 @@ public class UsuarioController : ControllerBase
     }
 
     [HttpPatch("{Id:guid}")]
+    [HttpPut("{Id:guid}")]
     public async Task<IActionResult> Atualizar(Guid Id, [FromBody] UsuarioDTOAtualizar DTO)
     {
         var usuarioExistente = await _usuario.BuscarPorId(Id);
