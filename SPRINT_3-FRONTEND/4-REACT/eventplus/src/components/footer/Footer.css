@@ -1,11 +1,20 @@
-:root {
-    --branco: #ffffff;
-    --cor-texto: #17143f;
+.home-footer {
+    width: 100%;
+    min-height: 40px;
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+    color: #000000;
 }
 
-.home-footer {
-    padding: 24px;
-    text-align: center;
-    background: var(--branco);
-    color: var(--cor-texto);
+.home-footer p {
+    margin: 0;
+    font-family: "Open Sans", "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 22px;
+    color: #000000;
 }
