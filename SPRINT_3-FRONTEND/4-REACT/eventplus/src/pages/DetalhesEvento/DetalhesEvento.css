@@ -1,0 +1,418 @@
+.detalhe-evento-page {
+    background-color: #ffffff;
+    min-height: calc(100vh - 125px);
+}
+
+.detalhe-evento-estado {
+    width: min(1200px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #6e6668;
+}
+
+.detalhe-evento-container {
+    width: min(1200px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 77px 0 96px;
+}
+
+.detalhe-evento-banner-wrapper {
+    width: 100%;
+    height: 383px;
+    overflow: hidden;
+}
+
+.detalhe-evento-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detalhe-evento-titulo {
+    margin: 18px 0 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: clamp(2.25rem, 4.2vw, 4.375rem);
+    line-height: 1.3;
+    color: #000000;
+    text-align: center;
+}
+
+.detalhe-evento-grid {
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.detalhe-evento-principal {
+    flex: 1;
+    max-width: 711px;
+    min-width: 0;
+}
+
+.detalhe-evento-abas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.detalhe-evento-aba {
+    min-height: 39px;
+    padding: 2px 24px;
+    border: none;
+    border-radius: 45px;
+    background: transparent;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 36px;
+    color: #000000;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.detalhe-evento-aba:hover {
+    color: #b51d44;
+}
+
+.detalhe-evento-aba.ativa {
+    min-width: 246px;
+    background-color: #b51d44;
+    color: #ffffff;
+}
+
+.detalhe-evento-sobre {
+    margin-top: 28px;
+}
+
+.detalhe-evento-sobre p {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 34px;
+    color: #000000;
+}
+
+.detalhe-evento-comentarios {
+    margin-top: 48px;
+    max-width: 673px;
+}
+
+.detalhe-evento-comentario-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.detalhe-evento-comentario-form .campo {
+    flex: 1;
+    min-height: 30px;
+    padding: 0 9px 4px;
+    border-bottom: 1px solid #000000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #000000;
+}
+
+.detalhe-evento-comentario-form .campo::placeholder {
+    color: #b4a9a9;
+}
+
+.detalhe-evento-enviar-btn {
+    border: none;
+    background: transparent;
+    padding: 2px;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.detalhe-evento-enviar-btn:hover:not(:disabled) {
+    transform: translateX(2px);
+    opacity: 0.85;
+}
+
+.detalhe-evento-enviar-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+.detalhe-evento-comentarios-lista {
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detalhe-evento-comentario {
+    padding-left: 8px;
+}
+
+.detalhe-evento-comentario-topo {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.detalhe-evento-comentario-topo strong {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #000000;
+}
+
+.detalhe-evento-comentario-topo time {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #000000;
+}
+
+.detalhe-evento-comentario p {
+    margin: 4px 0 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #000000;
+}
+
+.detalhe-evento-vazio {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: #6e6668;
+}
+
+.detalhe-evento-info {
+    width: 436px;
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
+.detalhe-evento-info-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.detalhe-evento-info-titulo h2 {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.detalhe-evento-info-titulo hr {
+    width: 315px;
+    max-width: 100%;
+    height: 2px;
+    margin: 0;
+    border: none;
+    background-color: #b51d44;
+    opacity: 1;
+}
+
+.detalhe-evento-info-lista {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detalhe-evento-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.detalhe-evento-info-item img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.detalhe-evento-info-item span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 30px;
+    color: #000000;
+}
+
+.detalhe-evento-botao-inscricao {
+    width: 356px;
+    max-width: 100%;
+    height: 45px;
+    min-height: 45px;
+    margin-top: 28px;
+    border-radius: 5px;
+    background-color: #b51d44;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 27px;
+    color: #ffffff;
+}
+
+.detalhe-evento-botao-inscricao.detalhe-evento-cancelar {
+    background-color: #821b47;
+}
+
+.detalhe-evento-mensagem {
+    margin: 14px 0 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.92rem;
+    color: #b51d44;
+}
+
+@media (max-width: 1024px) {
+    .detalhe-evento-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .detalhe-evento-info {
+        order: -1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .detalhe-evento-principal {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 680px) {
+    .detalhe-evento-container {
+        width: 100%;
+        padding: 0 0 56px;
+    }
+
+    .detalhe-evento-banner-wrapper {
+        height: 259px;
+    }
+
+    .detalhe-evento-titulo {
+        padding: 0 32px;
+        margin-top: 18px;
+        font-size: 2.1875rem;
+        line-height: 1.3;
+    }
+
+    .detalhe-evento-grid {
+        padding: 0 39px;
+        margin-top: 20px;
+        gap: 32px;
+    }
+
+    .detalhe-evento-info-titulo {
+        width: 100%;
+        align-items: center;
+    }
+
+    .detalhe-evento-info-titulo h2 {
+        font-size: 1.125rem;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    .detalhe-evento-info-titulo hr {
+        width: 100%;
+        max-width: 305px;
+    }
+
+    .detalhe-evento-info-lista {
+        width: 100%;
+        margin-top: 22px;
+        gap: 18px;
+    }
+
+    .detalhe-evento-info-item img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .detalhe-evento-info-item span {
+        font-size: 0.95rem;
+        line-height: 22px;
+    }
+
+    .detalhe-evento-botao-inscricao {
+        width: 100%;
+        height: 36px;
+        min-height: 36px;
+        padding: 4px 16px;
+        font-size: 1rem;
+        line-height: 24px;
+        margin-top: 24px;
+    }
+
+    .detalhe-evento-abas {
+        gap: 14px;
+        flex-wrap: nowrap;
+    }
+
+    .detalhe-evento-aba {
+        min-height: 31px;
+        padding: 2px 16px;
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .detalhe-evento-aba.ativa {
+        min-width: 156px;
+    }
+
+    .detalhe-evento-sobre p {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .detalhe-evento-comentarios {
+        margin-top: 32px;
+    }
+
+    .detalhe-evento-comentarios-lista {
+        margin-top: 28px;
+        gap: 18px;
+    }
+
+    .detalhe-evento-comentario {
+        padding-left: 0;
+    }
+
+    .detalhe-evento-comentario-topo strong,
+    .detalhe-evento-comentario-topo time {
+        font-size: 0.8125rem;
+        line-height: 18px;
+    }
+
+    .detalhe-evento-comentario p {
+        font-size: 0.8125rem;
+        line-height: 18px;
+    }
+}

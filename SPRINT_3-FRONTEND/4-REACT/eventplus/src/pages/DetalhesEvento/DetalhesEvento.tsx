@@ -1,42 +1,50 @@
-import { Link, useNavigate, useParams } from "react-router-dom";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
-import type { Presenca, Evento, Comentario, MensagemModeracao } from "../../types/api";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import type { Comentario, Evento, MensagemModeracao, Presenca } from "../../types/api";
 
-import imagemPadrao from "../../assets/banner-1.png"
-import relogio from "../../assets/icons/relogio.svg"
-import predio from "../../assets/icons/predio.svg"
-import filtro from "../../assets/icons/filtro.svg"
-import enviar from "../../assets/icons/enviar.svg"
+import imagemPadrao from "../../assets/banner-1.png";
+import enviar from "../../assets/icons/enviar.svg";
+import filtro from "../../assets/icons/filtro.svg";
+import predio from "../../assets/icons/predio.svg";
+import relogio from "../../assets/icons/relogio.svg";
 
-import Header from "../../components/header/Header";
+import Botao from "../../components/botao/Botao";
+import Campo from "../../components/campo/Campo";
 import Footer from "../../components/footer/Footer";
-import Botao from "../../components/botao/Botao"
+import Header from "../../components/header/Header";
+import ModalConfirmacao from "../../components/modalConfirmacao/ModalConfirmacao";
 
-import "./DetalhesEvento.css"
-import { comentarioService, eventoService, presencaService } from "../../services/eventPlusservice";
 import { useAuth } from "../../context/auth";
 import { getApiErrorMessage } from "../../services/api";
-import ModalConfirmacao from "../../components/modalConfirmacao/ModalConfirmacao";
-import Campo from "../../components/campo/Campo";
+import { comentarioService, eventoService, presencaService } from "../../services/eventPlusservice";
+import "./DetalhesEvento.css";
 
-function formatarData(value: string){
+function formatarDataEvento(value: string) {
     const data = new Date(value);
-    return Number.isNaN(data.getDate())
-    ? "Data não informada"
-    : new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "long", year: "numeric"}).format(data);
+    if (Number.isNaN(data.getTime())) {
+        return "Data não informada";
+    }
+    const dia = data.toLocaleDateString("pt-BR", { day: "2-digit" });
+    const mes = data.toLocaleDateString("pt-BR", { month: "long" });
+    const mesCapitalizado = mes.charAt(0).toUpperCase() + mes.slice(1);
+    const hora = data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    return `${dia} de ${mesCapitalizado} às ${hora}`;
 }
 
-function formatarHora(value: string){
+function formatarDataComentario(value: string) {
     const data = new Date(value);
-    return Number.isNaN(data.getTime())
-    ? "Horário não informado"
-    : new Intl.DateTimeFormat("pt-BR", {hour: "2-digit", minute: "2-digit"}).format(data);
+    if (Number.isNaN(data.getTime())) {
+        return "";
+    }
+    const diaMes = data.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
+    const hora = data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
+    return `${diaMes} - ${hora}`;
 }
 
 function DetalhesEvento() {
     const { id = "" } = useParams();
-
     const navigate = useNavigate();
+    const location = useLocation();
 
     const { autenticado, usuario } = useAuth();
     const [evento, setEvento] = useState<Evento | null>(null);
@@ -47,69 +55,75 @@ function DetalhesEvento() {
     const [confirmandoCancelamento, setConfirmandoCancelamento] = useState(false);
     const [enviandoInscricao, setEnviandoInscricao] = useState(false);
     const [mensagemInscricao, setMensagemInscricao] = useState("");
-    const [carregando, setCarregando] = useState(false)
+    const [carregando, setCarregando] = useState(true);
     const [novoComentario, setNovoComentario] = useState("");
-    const [mensagemComentario, setMensagemComentario] = useState("")
+    const [mensagemComentario, setMensagemComentario] = useState("");
     const [enviandoComentario, setEnviandoComentario] = useState(false);
-    const [erro, setErro] = useState("")
+    const [erro, setErro] = useState("");
 
     const carregar = useCallback(async () => {
         if (!id) return;
         setCarregando(true);
-        setErro("")
+        setErro("");
         try {
             const [eventoAtual, comentariosAtuais] = await Promise.all([
                 eventoService.buscar(id),
-                comentarioService.listarPorEvento(id)
+                comentarioService.listarPorEvento(id).catch(() => [] as Comentario[]),
             ]);
             setEvento(eventoAtual);
-            setComentarios(comentariosAtuais)
-        } catch (error){
+            setComentarios(comentariosAtuais);
+        } catch (error) {
             setErro(getApiErrorMessage(error));
-        }finally{
+        } finally {
             setCarregando(false);
         }
-    }, [id])
+    }, [id]);
 
     useEffect(() => {
         const timeout = window.setTimeout(() => void carregar(), 0);
         return () => window.clearTimeout(timeout);
-    }, [carregar])
+    }, [carregar]);
 
     useEffect(() => {
-        if(!usuario || !id) return;
-        const chave = `${usuario.idUsuario}:${id}`
+        if (!usuario || !id) return;
+        const chave = `${usuario.idUsuario}:${id}`;
         let ativo = true;
 
         presencaService
-        .listarPorUsuario(usuario.idUsuario)
-        .then((items) => {
-            if(ativo) setPresenca(items.find((item) => item.idEvento === id) ?? null)
-        })
-        .catch(() => {
-            if(ativo) setPresenca(null);
-        })
-        .finally(() => {
-            if(ativo) setPresencaCarregada(chave)
-        })
-    },[id, usuario]);
+            .listarPorUsuario(usuario.idUsuario)
+            .then((items) => {
+                if (ativo) {
+                    setPresenca(items.find((item) => item.idEvento === id) ?? null);
+                }
+            })
+            .catch(() => {
+                if (ativo) setPresenca(null);
+            })
+            .finally(() => {
+                if (ativo) setPresencaCarregada(chave);
+            });
+
+        return () => {
+            ativo = false;
+        };
+    }, [id, usuario]);
 
     function exigirLogin() {
-        if(autenticado) return false;
-        navigate("/", {state: {from: location.pathname}});
-        return true
+        if (autenticado) return false;
+        navigate("/login", { state: { from: location.pathname } });
+        return true;
     }
 
     async function inscrever() {
-        if(exigirLogin() || !usuario || !evento || presenca) return;
+        if (exigirLogin() || !usuario || !evento || presenca) return;
         setEnviandoInscricao(true);
         setMensagemInscricao("");
 
         try {
             const novaPresenca = await presencaService.cadastrar({
                 situacao: true,
-                idEvento: evento?.idEvento || "",
-                idUsuario: usuario?.idUsuario || ""
+                idEvento: evento.idEvento,
+                idUsuario: usuario.idUsuario,
             });
             setPresenca(novaPresenca);
             setMensagemInscricao("Inscrição realizada com sucesso.");
@@ -120,143 +134,225 @@ function DetalhesEvento() {
         }
     }
 
-    async function cancelarInscricao(){
-        if(!presenca || enviandoInscricao) return;
+    async function cancelarInscricao() {
+        if (!presenca || enviandoInscricao) return;
         setEnviandoInscricao(true);
-        setMensagemInscricao("")
+        setMensagemInscricao("");
 
-        try{
+        try {
             await presencaService.excluir(presenca.idPresenca);
             setPresenca(null);
             setMensagemInscricao("Inscrição cancelada com sucesso.");
-        }catch(error){
+        } catch (error) {
             setMensagemInscricao(getApiErrorMessage(error));
-        }finally{
+        } finally {
             setConfirmandoCancelamento(false);
-            setEnviandoInscricao(false)
+            setEnviandoInscricao(false);
         }
     }
 
-    async function comentar(event: FormEvent<HTMLFormElement>){
+    async function comentar(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        if(exigirLogin() || !usuario || !novoComentario.trim()) return;
+        if (exigirLogin() || !usuario || !novoComentario.trim()) return;
         setEnviandoComentario(true);
-        setMensagemComentario("")
+        setMensagemComentario("");
 
-        try{
+        try {
             const response = await comentarioService.cadastrar({
                 descricao: novoComentario.trim(),
-                idEvento: evento?.idEvento || "",
-                idUsuario: usuario.idUsuario
+                idEvento: evento?.idEvento || id,
+                idUsuario: usuario.idUsuario,
             });
-            setNovoComentario("")
-            if("mensagem" in response){
+            setNovoComentario("");
+            if ("mensagem" in response) {
                 setMensagemComentario((response as MensagemModeracao).mensagem);
-            } else{
+            } else {
                 setComentarios((items) => [...items, response]);
                 setMensagemComentario("Comentário publicado.");
             }
-        }catch (error){
+        } catch (error) {
             setMensagemComentario(getApiErrorMessage(error));
         } finally {
             setEnviandoComentario(false);
         }
     }
 
-    const chavePresenca = usuario && id ? `${usuario.idUsuario}:${id}` : ""
-    const checandoPresenca = Boolean(chavePresenca && presencaCarregada !== chavePresenca)
+    const chavePresenca = usuario && id ? `${usuario.idUsuario}:${id}` : "";
+    const checandoPresenca = Boolean(chavePresenca && presencaCarregada !== chavePresenca);
 
     return (
         <>
             <Header />
-            <main>
-                <img src={evento?.imagemUrl || imagemPadrao} alt="Banner do evento" />
-                <h1>{evento?.nome}</h1>
-                <div>
-                    <button onClick={() => setSecaoComentarios(false)}>Sobre o Evento</button>
-                    <button onClick={() => setSecaoComentarios(true)}>Comentários</button>
-                    {secaoComentarios ?
-                        <div className="detalhe-evento-comentarios" role="tabpanel">
-                            <form onSubmit={comentar}>
-                                <label className="visually-hidden" htmlFor="novo-comentario">Comentar</label>
-                                <Campo 
-                                id="novo-comentario" 
-                                value={novoComentario} 
-                                maxLength={200}
-                                onChange={(event) => setNovoComentario(event.target.value)}
-                                />
-                                <button 
-                                type="submit"
-                                aria-label="Enviar comentário"
-                                disabled={enviandoComentario}
-                                >
-                                    <img src={enviar} alt="icone de enviar" />
-                                </button>
-                            </form>
-
-                            {
-                            mensagemComentario 
-                            ? <p className="detalhe-evento-mensagem" role="status">{mensagemComentario}</p> 
-                            : null
-                            }
-
-                            {comentarios.length === 0 
-                            ? <p>Nenhum comentário publicado</p>
-                            : comentarios.map((comentario) => (
-                                <article key={comentario.idComentario} className="detalhe-evento-comentario">
-                                    <div>
-                                        <strong>{comentario.idUsuarioNavigation?.nome || "Usuário"}</strong> <time>{new Date(comentario.dataComentario).toLocaleString("pt-BR", {day: "2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit"})}</time>
-                                        <p>{comentario.descricao}</p>
-                                    </div>
-                                </article>
-                            ))}
+            <main className="detalhe-evento-page">
+                {carregando ? (
+                    <div className="detalhe-evento-estado">
+                        <p>Carregando detalhes do evento...</p>
+                    </div>
+                ) : erro ? (
+                    <div className="detalhe-evento-estado">
+                        <p className="detalhe-evento-mensagem">{erro}</p>
+                    </div>
+                ) : (
+                    <section className="detalhe-evento-container">
+                        <div className="detalhe-evento-banner-wrapper">
+                            <img
+                                className="detalhe-evento-banner"
+                                src={evento?.imagemUrl || imagemPadrao}
+                                alt={evento?.nome ? `Banner do evento ${evento.nome}` : "Banner do evento"}
+                            />
                         </div>
-                        :
-                        <>
-                            <p>{evento?.descricao}</p>
-                        </>}
-                </div>
-                <div>
-                    <h2>Informações principais</h2>
-                    <hr />
 
-                    <div>
-                        <img src={relogio} alt="" />
-                        <span>{formatarData(evento?.dataEvento || "")} às {formatarHora(evento?.dataEvento || "")}</span>
-                    </div>
-                    <div>
-                        <img src={predio} alt="" />
-                        <span>{evento?.idInstituicaoNavigation?.nomeFantasia}</span>
-                    </div>
-                    <div>
-                        <img src={filtro} alt="" />
-                        <span>{evento?.idTipoEventoNavigation?.titulo}</span>
-                    </div>
-                    <Botao
-                        className={presenca ? "detalhe-evento-cancelar" : ""}
-                        texto={
-                            checandoPresenca ? "Verificando inscrição..." : presenca ? "Cancelar Inscrição" : enviandoInscricao ? "Inscrevendo..." : "Se inscrever"}
-                        type="button"
-                        disabled={checandoPresenca || enviandoInscricao}
-                        onClick={() => presenca ? setConfirmandoCancelamento(true): void inscrever()}
-                    />
-                    {mensagemInscricao ? <p className="detalhe-evento-mensagem" role="status">{mensagemInscricao}</p> : null}
-                </div>
+                        <h1 className="detalhe-evento-titulo">{evento?.nome || "Título do Evento"}</h1>
+
+                        <div className="detalhe-evento-grid">
+                            <div className="detalhe-evento-principal">
+                                <div className="detalhe-evento-abas" role="tablist" aria-label="Seções do evento">
+                                    <button
+                                        type="button"
+                                        role="tab"
+                                        aria-selected={!secaoComentarios}
+                                        className={`detalhe-evento-aba ${!secaoComentarios ? "ativa" : ""}`}
+                                        onClick={() => setSecaoComentarios(false)}
+                                    >
+                                        Sobre o evento
+                                    </button>
+                                    <button
+                                        type="button"
+                                        role="tab"
+                                        aria-selected={secaoComentarios}
+                                        className={`detalhe-evento-aba ${secaoComentarios ? "ativa" : ""}`}
+                                        onClick={() => setSecaoComentarios(true)}
+                                    >
+                                        Comentários
+                                    </button>
+                                </div>
+
+                                {secaoComentarios ? (
+                                    <div className="detalhe-evento-comentarios" role="tabpanel">
+                                        <form className="detalhe-evento-comentario-form" onSubmit={comentar}>
+                                            <label className="visually-hidden" htmlFor="novo-comentario">
+                                                Comentar
+                                            </label>
+                                            <Campo
+                                                id="novo-comentario"
+                                                value={novoComentario}
+                                                placeholder="Comentar"
+                                                maxLength={200}
+                                                onChange={(event) => setNovoComentario(event.target.value)}
+                                            />
+                                            <button
+                                                className="detalhe-evento-enviar-btn"
+                                                type="submit"
+                                                aria-label="Enviar comentário"
+                                                disabled={enviandoComentario}
+                                            >
+                                                <img src={enviar} alt="Enviar" />
+                                            </button>
+                                        </form>
+
+                                        {mensagemComentario ? (
+                                            <p className="detalhe-evento-mensagem" role="status">
+                                                {mensagemComentario}
+                                            </p>
+                                        ) : null}
+
+                                        <div className="detalhe-evento-comentarios-lista">
+                                            {comentarios.length === 0 ? (
+                                                <p className="detalhe-evento-vazio">Nenhum comentário publicado.</p>
+                                            ) : (
+                                                comentarios.map((comentario) => (
+                                                    <article
+                                                        key={comentario.idComentario}
+                                                        className="detalhe-evento-comentario"
+                                                    >
+                                                        <div className="detalhe-evento-comentario-topo">
+                                                            <strong>
+                                                                {comentario.idUsuarioNavigation?.nome ||
+                                                                    (comentario.idUsuario === usuario?.idUsuario
+                                                                        ? usuario?.nome
+                                                                        : "Usuário")}
+                                                            </strong>
+                                                            <time>{formatarDataComentario(comentario.dataComentario)}</time>
+                                                        </div>
+                                                        <p>{comentario.descricao}</p>
+                                                    </article>
+                                                ))
+                                            )}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="detalhe-evento-sobre" role="tabpanel">
+                                        <p>{evento?.descricao || "Sem descrição disponível para este evento."}</p>
+                                    </div>
+                                )}
+                            </div>
+
+                            <aside className="detalhe-evento-info">
+                                <div className="detalhe-evento-info-titulo">
+                                    <h2>INFORMAÇÕES PRINCIPAIS</h2>
+                                    <hr />
+                                </div>
+
+                                <div className="detalhe-evento-info-lista">
+                                    <div className="detalhe-evento-info-item">
+                                        <img src={relogio} alt="" />
+                                        <span>{formatarDataEvento(evento?.dataEvento || "")}</span>
+                                    </div>
+                                    <div className="detalhe-evento-info-item">
+                                        <img src={predio} alt="" />
+                                        <span>
+                                            {evento?.idInstituicaoNavigation?.nomeFantasia || "SENAI Cyber & IA - São Caetano do Sul"}
+                                        </span>
+                                    </div>
+                                    <div className="detalhe-evento-info-item">
+                                        <img src={filtro} alt="" />
+                                        <span>{evento?.idTipoEventoNavigation?.titulo || "Evento"}</span>
+                                    </div>
+                                </div>
+
+                                <Botao
+                                    className={`detalhe-evento-botao-inscricao ${presenca ? "detalhe-evento-cancelar" : ""}`}
+                                    texto={
+                                        checandoPresenca
+                                            ? "Verificando inscrição..."
+                                            : presenca
+                                              ? "Cancelar Inscrição"
+                                              : enviandoInscricao
+                                                ? "Inscrevendo..."
+                                                : "Se-inscrever"
+                                    }
+                                    type="button"
+                                    disabled={checandoPresenca || enviandoInscricao}
+                                    onClick={() =>
+                                        presenca ? setConfirmandoCancelamento(true) : void inscrever()
+                                    }
+                                />
+
+                                {mensagemInscricao ? (
+                                    <p className="detalhe-evento-mensagem" role="status">
+                                        {mensagemInscricao}
+                                    </p>
+                                ) : null}
+                            </aside>
+                        </div>
+                    </section>
+                )}
+
                 <ModalConfirmacao
                     show={confirmandoCancelamento}
                     titulo="Cancelar inscrição"
-                    mensagem={`Deseja cancelar sua inscrição em "${evento?.nome || "este evento"}?"`}
+                    mensagem={`Deseja cancelar sua inscrição em "${evento?.nome || "este evento"}"?`}
                     textoConfirmar={enviandoInscricao ? "Cancelando..." : "Cancelar Inscrição"}
-                    textoCancelar="Manter incrição"
+                    textoCancelar="Manter inscrição"
                     onClose={() => {
-                        if(!enviandoInscricao) setConfirmandoCancelamento(false);
+                        if (!enviandoInscricao) setConfirmandoCancelamento(false);
                     }}
                     onConfirm={() => void cancelarInscricao()}
                 />
             </main>
             <Footer />
         </>
-    )
+    );
 }
 
 export default DetalhesEvento;
