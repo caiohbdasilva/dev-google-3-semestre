@@ -52,11 +52,6 @@ function AdminEventos() {
             setEventos(eventosApi);
             setTiposEvento(tiposApi);
             setInstituicoes(instituicoesApi);
-            setFormulario((atual) => ({
-                ...atual,
-                idTipoEvento: atual.idTipoEvento || tiposApi[0]?.idTipoEvento || "",
-                idInstituicao: atual.idInstituicao || instituicoesApi[0]?.idInstituicao || "",
-            }));
         } catch (error) {
             setMensagem(getApiErrorMessage(error));
         } finally {
@@ -80,11 +75,7 @@ function AdminEventos() {
     }
 
     function limpar() {
-        setFormulario({
-            ...inicial,
-            idTipoEvento: tiposEvento[0]?.idTipoEvento || "",
-            idInstituicao: instituicoes[0]?.idInstituicao || "",
-        });
+        setFormulario(inicial);
         setArquivoImagem(null);
         if (fileInputRef.current) fileInputRef.current.value = "";
     }
@@ -164,6 +155,7 @@ function AdminEventos() {
                                         id="evento-data"
                                         name="dataEvento"
                                         type="datetime-local"
+                                        className={!formulario.dataEvento ? "input-vazio" : ""}
                                         value={formulario.dataEvento}
                                         onChange={atualizar}
                                         required
@@ -194,6 +186,7 @@ function AdminEventos() {
                                     <select
                                         id="evento-tipo"
                                         name="idTipoEvento"
+                                        className={!formulario.idTipoEvento ? "select-vazio" : ""}
                                         value={formulario.idTipoEvento}
                                         onChange={atualizar}
                                         required
@@ -216,6 +209,7 @@ function AdminEventos() {
                                     <select
                                         id="evento-instituicao"
                                         name="idInstituicao"
+                                        className={!formulario.idInstituicao ? "select-vazio" : ""}
                                         value={formulario.idInstituicao}
                                         onChange={atualizar}
                                         required
@@ -234,7 +228,9 @@ function AdminEventos() {
 
                             <div className="admin-evento-campo-foto">
                                 <label htmlFor="evento-foto">
-                                    <span>{arquivoImagem ? arquivoImagem.name : "Foto"}</span>
+                                    <span className={arquivoImagem ? "foto-selecionada" : ""}>
+                                        {arquivoImagem ? arquivoImagem.name : "Foto"}
+                                    </span>
                                     <img src={iconeUpload} alt="Enviar foto" />
                                 </label>
                                 <input

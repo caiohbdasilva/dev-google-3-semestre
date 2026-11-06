@@ -17,7 +17,7 @@ function ListaUsuarios({ usuarios, idEmEdicao, carregando, onEditar, onExcluir }
         <section className="lista-tipos lista-usuarios">
             <div className="lista-tipos-conteudo">
                 <div className="lista-tipos-titulo">
-                    <h2>Lista de Usuários</h2>
+                    <h2>LISTA USUÁRIOS</h2>
                     <hr />
                 </div>
                 <div className="lista-tipos-tabela-wrapper">
@@ -25,10 +25,10 @@ function ListaUsuarios({ usuarios, idEmEdicao, carregando, onEditar, onExcluir }
                         <thead>
                             <tr>
                                 <th>Nome</th>
-                                <th>E-mail</th>
-                                <th>Tipo Usuário</th>
+                                <th>Email</th>
+                                <th>Tipo de Usuário</th>
                                 <th>Editar</th>
-                                <th>Excluir</th>
+                                <th>Deletar</th>
                             </tr>
                         </thead>
                         <tbody>

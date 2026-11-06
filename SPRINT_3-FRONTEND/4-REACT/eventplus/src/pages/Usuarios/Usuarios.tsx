@@ -40,10 +40,6 @@ function Usuarios() {
             ]);
             setUsuarios(usuariosApi);
             setTipos(tiposApi);
-            setFormulario((value) => ({
-                ...value,
-                idTipoUsuario: value.idTipoUsuario || tiposApi[0]?.idTipoUsuario || ""
-            }));
         } catch (error) {
             setMensagem(getApiErrorMessage(error));
         } finally {
@@ -61,7 +57,7 @@ function Usuarios() {
     }
 
     function limpar() {
-        setFormulario({ ...inicial, idTipoUsuario: tipos[0]?.idTipoUsuario || "" });
+        setFormulario(inicial);
         setIdEmEdicao(null);
         setMensagem("");
     }
@@ -123,7 +119,7 @@ function Usuarios() {
             <main className="cadastro-usuario-page">
                 <section className="cadastro-usuario-formulario-section">
                     <div className="cadastro-usuario-titulo">
-                        <h1 className="section-title">Administração Usuário</h1>
+                        <h1 className="section-title">ADMINISTRAÇÃO USUÁRIO</h1>
                         <hr />
                     </div>
                     <div className="cadastro-usuario-conteudo">
@@ -141,26 +137,30 @@ function Usuarios() {
                                 maxLength={100}
                                 required
                             />
-                            <label className="visually-hidden" htmlFor="usuario-email">E-mail</label>
+                            <label className="visually-hidden" htmlFor="usuario-email">Email</label>
                             <Campo
                                 id="usuario-email"
                                 name="email"
                                 type="email"
                                 value={formulario.email}
                                 onChange={atualizar}
-                                placeholder="E-mail"
+                                placeholder="Email"
                                 required
                             />
                             <div className="cadastro-usuario-grid">
                                 <div>
-                                    <label className="visually-hidden" htmlFor="usuario-tipo">Tipo de usuário</label>
+                                    <label className="visually-hidden" htmlFor="usuario-tipo">Tipo de Usuário</label>
                                     <select
                                         name="idTipoUsuario"
                                         id="usuario-tipo"
+                                        className={!formulario.idTipoUsuario ? "select-vazio" : ""}
                                         value={formulario.idTipoUsuario}
                                         onChange={atualizar}
                                         required
                                     >
+                                        <option value="" disabled>
+                                            Tipo de Usuário
+                                        </option>
                                         {tipos.map((tipo) => (
                                             <option value={tipo.idTipoUsuario} key={tipo.idTipoUsuario}>
                                                 {tipo.titulo}

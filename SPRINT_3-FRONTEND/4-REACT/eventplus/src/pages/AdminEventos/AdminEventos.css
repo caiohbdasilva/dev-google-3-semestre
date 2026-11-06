@@ -45,7 +45,7 @@
 }
 
 .admin-evento-subtitulo hr {
-    width: 150px;
+    width: 120px;
 }
 
 .admin-evento-conteudo {
@@ -87,25 +87,30 @@
     width: 201px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    border-bottom: 1px solid #000000;
-    padding-bottom: 4px;
+    gap: 9px;
 }
 
 .admin-evento-campo-data img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     flex-shrink: 0;
 }
 
 .admin-evento-campo-data input {
     width: 100%;
     border: none;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 4px;
     outline: none;
     background: transparent;
     font-family: "Poppins", sans-serif;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 0.92rem;
     color: #151515;
+}
+
+.admin-evento-campo-data input.input-vazio {
+    color: #b4a9a9;
 }
 
 .admin-evento-campo-largo {
@@ -154,6 +159,14 @@
     cursor: pointer;
 }
 
+.admin-evento-select-wrapper select.select-vazio {
+    color: #b4a9a9;
+}
+
+.admin-evento-select-wrapper select option {
+    color: #151515;
+}
+
 .admin-evento-campo-foto {
     width: 100%;
 }
@@ -170,6 +183,10 @@
     color: #b4a9a9;
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
+}
+
+.admin-evento-campo-foto label span.foto-selecionada {
+    color: #151515;
 }
 
 .admin-evento-campo-foto label img {

@@ -99,6 +99,14 @@
     cursor: pointer;
 }
 
+.cadastro-usuario-grid select.select-vazio {
+    color: #b4a9a9;
+}
+
+.cadastro-usuario-grid select option {
+    color: #151515;
+}
+
 .cadastro-usuario-grid .botao {
     grid-column: 1 / -1;
     width: 100%;
